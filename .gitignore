@@ -1,0 +1,9 @@
+.import/
+.export/
+*.godot
+*.mono/
+.DS_Store
+Thumbs.db
+*.log
+*.tmp   
+VampiroAssets/
