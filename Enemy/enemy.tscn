@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bmho65yeqymis" path="res://Enemy/enemy.gd" id="1_px1sc"]
 [ext_resource type="PackedScene" uid="uid://bq7tg6cfj6qbb" path="res://Utility/hurt_box.tscn" id="3_eqilm"]
 [ext_resource type="PackedScene" uid="uid://bacrfrx83p3dv" path="res://Utility/hit_box.tscn" id="4_ncf7h"]
+[ext_resource type="AudioStream" uid="uid://cgiw2d66vtt6e" path="res://Audio/SoundEffect/enemy_hit.ogg" id="5_ncf7h"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_px1sc"]
 radius = 4.0
@@ -75,6 +76,7 @@ libraries/ = SubResource("AnimationLibrary_eqilm")
 visible = false
 collision_layer = 4
 collision_mask = 4
+HurtBoxType = 1
 
 [node name="CollisionShape2D" parent="HurtBox" index="0" unique_id=1811272793]
 position = Vector2(1, 3)
@@ -87,6 +89,10 @@ collision_mask = 2
 [node name="CollisionShape2D" parent="HitBox" index="0"]
 position = Vector2(1, 4)
 shape = SubResource("RectangleShape2D_eqilm")
+
+[node name="snd_hit" type="AudioStreamPlayer2D" parent="." unique_id=214614909]
+stream = ExtResource("5_ncf7h")
+volume_db = -20.0
 
 [connection signal="hurt" from="HurtBox" to="." method="_on_hurt_box_hurt"]
 

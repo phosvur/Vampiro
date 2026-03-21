@@ -55,7 +55,7 @@ func movement():
 	move_and_slide()
 
 
-func _on_hurt_box_hurt(damage):
+func _on_hurt_box_hurt(damage, _angle, _knockback):
 	hp -= damage
 	print(hp)
 
