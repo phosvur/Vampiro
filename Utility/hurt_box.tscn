@@ -1,13 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://bq7tg6cfj6qbb"]
+[gd_scene format=3 uid="uid://bq7tg6cfj6qbb"]
 
 [ext_resource type="Script" uid="uid://d21el06vna36x" path="res://Utility/hurt_box.gd" id="1_flpa1"]
 
-[node name="HurtBox" type="Area2D"]
+[node name="HurtBox" type="Area2D" unique_id=354489859]
 script = ExtResource("1_flpa1")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1811272793]
 
-[node name="DisableTimer" type="Timer" parent="."]
+[node name="DisableTimer" type="Timer" parent="." unique_id=1401956022]
 wait_time = 0.5
 one_shot = true
 

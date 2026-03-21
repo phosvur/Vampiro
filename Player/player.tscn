@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://8ldeawdekyhn"]
+[gd_scene format=3 uid="uid://8ldeawdekyhn"]
 
 [ext_resource type="Script" uid="uid://ch8ykj76s6uy0" path="res://Player/player.gd" id="1_4ntmi"]
 [ext_resource type="Texture2D" uid="uid://djjj7b0nu36db" path="res://Textures/Player/player_sprite.png" id="1_l8h54"]
@@ -11,26 +11,29 @@ height = 20.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gwnis"]
 size = Vector2(11, 16)
 
-[node name="Player" type="CharacterBody2D" groups=["player"]]
+[sub_resource type="CircleShape2D" id="CircleShape2D_btcbx"]
+radius = 367.8872
+
+[node name="Player" type="CharacterBody2D" unique_id=1959000591 groups=["player"]]
 motion_mode = 1
 script = ExtResource("1_4ntmi")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=604066874]
 texture = ExtResource("1_l8h54")
 hframes = 2
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2068044585]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1628166365]
 position = Vector2(1, 2)
 shape = SubResource("CapsuleShape2D_4ntmi")
 
-[node name="walkTimer" type="Timer" parent="."]
+[node name="walkTimer" type="Timer" parent="." unique_id=469472862]
 unique_name_in_owner = true
 wait_time = 0.2
 one_shot = true
 
-[node name="HurtBox" parent="." instance=ExtResource("3_btcbx")]
+[node name="HurtBox" parent="." unique_id=1217112602 instance=ExtResource("3_btcbx")]
 collision_layer = 2
 collision_mask = 2
 
@@ -38,6 +41,28 @@ collision_mask = 2
 position = Vector2(1.5, 2)
 shape = SubResource("RectangleShape2D_gwnis")
 
+[node name="Attack" type="Node2D" parent="." unique_id=686447269]
+
+[node name="IceSpearTimer" type="Timer" parent="Attack" unique_id=1135036085]
+unique_name_in_owner = true
+wait_time = 1.5
+
+[node name="IceSpearAttackTimer" type="Timer" parent="Attack/IceSpearTimer" unique_id=90892552]
+unique_name_in_owner = true
+wait_time = 0.075
+
+[node name="EnemyDetectionArea" type="Area2D" parent="." unique_id=1931068655]
+collision_layer = 4
+collision_mask = 4
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyDetectionArea" unique_id=1097622126]
+shape = SubResource("CircleShape2D_btcbx")
+
 [connection signal="hurt" from="HurtBox" to="." method="_on_hurt_box_hurt"]
+[connection signal="timeout" from="Attack/IceSpearTimer" to="." method="_on_ice_spear_timer_timeout"]
+[connection signal="timeout" from="Attack/IceSpearTimer/IceSpearAttackTimer" to="." method="_on_ice_spear_attack_timer_timeout"]
+[connection signal="body_entered" from="EnemyDetectionArea" to="." method="_on_enemy_detection_area_body_entered"]
+[connection signal="body_exited" from="EnemyDetectionArea" to="." method="_on_enemy_detection_area_body_exited"]
 
 [editable path="HurtBox"]

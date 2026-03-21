@@ -1,4 +1,5 @@
-res://Utility/enemy_spawner.tscn
-res://Utility/enemy_spawner.gd
-res://Utility/spawn_info.gd
-res://World/world.tscn
+res://Enemy/enemy.gd
+res://Enemy/enemy.tscn
+res://Player/Attack/ice_spear.gd
+res://Player/Attack/ice_spear.tscn
+res://Player/player.gd
