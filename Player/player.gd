@@ -58,6 +58,13 @@ func movement():
 func _on_hurt_box_hurt(damage, _angle, _knockback):
 	hp -= damage
 	print(hp)
+	
+	if hp <= 0:
+		game_over()
+
+func game_over():
+	print("Game Over!")
+	get_tree().paused = true
 
 
 func _on_ice_spear_timer_timeout():
