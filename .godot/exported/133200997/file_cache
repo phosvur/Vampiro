@@ -1,0 +1,8 @@
+res://Enemy/enemy.tscn::0399fdca0bad86823eca8722a30529ce::1774117268::res://.godot/exported/133200997/export-fd710a71c2d2ebe52136e62dc9922fbe-enemy.scn
+res://Enemy/explosion.tscn::1aa215e08e169b7091dc97732a9de730::1774118653::res://.godot/exported/133200997/export-1f6c10fbb05585bbe950672868bd380f-explosion.scn
+res://Player/Attack/ice_spear.tscn::86a0071af5cd21da7198b06921a26b5f::1774118703::res://.godot/exported/133200997/export-faae9c36d702093b9a77a52e227334ee-ice_spear.scn
+res://Player/player.tscn::6ba742ee7ee86b9239966ac54e3e2fd2::1774115569::res://.godot/exported/133200997/export-d267b47f7e81a3258979164d56d0d9c2-player.scn
+res://Utility/enemy_spawner.tscn::8d02d25167f8359aba2c67722df34f48::1774118502::res://.godot/exported/133200997/export-6538c176aa9d792f5b57f4c211309eaa-enemy_spawner.scn
+res://Utility/hit_box.tscn::4d405c66f0e877fd69e89761237d670a::1772218019::res://.godot/exported/133200997/export-c0b8329470e3a8a3346cddcfda3f2815-hit_box.scn
+res://Utility/hurt_box.tscn::ac181ce85e97ae02f00984e94ec48968::1774115941::res://.godot/exported/133200997/export-a60fe6600d20ea02ad9949a92024b18d-hurt_box.scn
+res://World/world.tscn::b091cde6c2cb86e873abfcc06566360c::1774118226::res://.godot/exported/133200997/export-89647171d5d7bdb8a088d65cc9aa3a3a-world.scn
