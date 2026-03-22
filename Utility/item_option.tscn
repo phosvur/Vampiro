@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://bhl1pbvus2hva"]
+
+[ext_resource type="Script" uid="uid://bt6navmu0klpn" path="res://Utility/item_option.gd" id="1_jyb5d"]
+[ext_resource type="Texture2D" uid="uid://jjy043vpgln5" path="res://Textures/Items/Weapons/ice_spear.png" id="1_k7luv"]
+[ext_resource type="FontFile" uid="uid://ca00qd225l4hd" path="res://VampiroAssets/fonts/Gotfridus.otf" id="2_jyb5d"]
+[ext_resource type="FontFile" uid="uid://da1wdgddvjtnk" path="res://Font/tenderness.otf" id="3_h2inl"]
+
+[node name="ItemOption" type="ColorRect" unique_id=2080789018]
+custom_minimum_size = Vector2(180, 50)
+anchors_preset = -1
+anchor_right = 0.28100002
+anchor_bottom = 0.13900001
+offset_right = -139.84001
+offset_bottom = -10.040005
+color = Color(0.5017686, 0.51962227, 0.49886036, 1)
+script = ExtResource("1_jyb5d")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1718858782]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 26.0
+offset_bottom = 26.0
+color = Color(0, 0, 0, 1)
+
+[node name="ItemIcon" type="TextureRect" parent="ColorRect" unique_id=1171109704]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_k7luv")
+
+[node name="lbl_name" type="Label" parent="." unique_id=1073351505]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 3.0
+offset_right = 132.0
+offset_bottom = 26.0
+theme_override_fonts/font = ExtResource("2_jyb5d")
+theme_override_font_sizes/font_size = 13
+text = "Ice Spear"
+
+[node name="lbl_description" type="Label" parent="." unique_id=2131616461]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 27.0
+offset_right = 166.0
+offset_bottom = 48.0
+theme_override_fonts/font = ExtResource("3_h2inl")
+theme_override_font_sizes/font_size = 8
+text = "Description of item"
+autowrap_mode = 3
+
+[node name="lbl_level" type="Label" parent="." unique_id=1110863154]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 3.0
+offset_right = 177.0
+offset_bottom = 26.0
+theme_override_fonts/font = ExtResource("3_h2inl")
+theme_override_font_sizes/font_size = 12
+text = "level: 1"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
