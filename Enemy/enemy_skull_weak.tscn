@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://d31ktfp3jcxda"]
+
+[ext_resource type="Script" uid="uid://bmho65yeqymis" path="res://Enemy/enemy.gd" id="1_0q20x"]
+[ext_resource type="Texture2D" uid="uid://damgf6jet7wnn" path="res://VampiroAssets/characters/Skull/Bones_SingleSkull_Fly.png" id="2_0q20x"]
+[ext_resource type="PackedScene" uid="uid://bq7tg6cfj6qbb" path="res://Utility/hurt_box.tscn" id="3_6b3mk"]
+[ext_resource type="PackedScene" uid="uid://bacrfrx83p3dv" path="res://Utility/hit_box.tscn" id="4_7c4qo"]
+[ext_resource type="AudioStream" uid="uid://cgiw2d66vtt6e" path="res://Audio/SoundEffect/enemy_hit.ogg" id="5_pfiqr"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_px1sc"]
+radius = 3.0
+height = 6.0
+
+[sub_resource type="Animation" id="Animation_am0pq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_px1sc"]
+resource_name = "walk"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eqilm"]
+_data = {
+&"RESET": SubResource("Animation_am0pq"),
+&"walk": SubResource("Animation_px1sc")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_am0pq"]
+size = Vector2(10, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eqilm"]
+size = Vector2(6.5, 8)
+
+[node name="enemy_kobold_weak" type="CharacterBody2D" unique_id=1882834488]
+collision_layer = 5
+collision_mask = 5
+motion_mode = 1
+script = ExtResource("1_0q20x")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2068472277]
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_0q20x")
+flip_h = true
+hframes = 4
+vframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=249912212]
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_px1sc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1411533204]
+libraries/ = SubResource("AnimationLibrary_eqilm")
+
+[node name="HurtBox" parent="." unique_id=1864516679 instance=ExtResource("3_6b3mk")]
+collision_layer = 4
+collision_mask = 4
+HurtBoxType = 1
+
+[node name="CollisionShape2D" parent="HurtBox" index="0" unique_id=1811272793]
+position = Vector2(1, 0.5)
+shape = SubResource("RectangleShape2D_am0pq")
+
+[node name="HitBox" parent="." unique_id=2078461503 instance=ExtResource("4_7c4qo")]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_eqilm")
+
+[node name="snd_hit" type="AudioStreamPlayer2D" parent="." unique_id=214614909]
+stream = ExtResource("5_pfiqr")
+volume_db = -20.0
+
+[connection signal="hurt" from="HurtBox" to="." method="_on_hurt_box_hurt"]
+
+[editable path="HurtBox"]
+[editable path="HitBox"]
