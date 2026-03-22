@@ -3,8 +3,10 @@
 [ext_resource type="Script" uid="uid://ch8ykj76s6uy0" path="res://Player/player.gd" id="1_4ntmi"]
 [ext_resource type="Texture2D" uid="uid://djjj7b0nu36db" path="res://Textures/Player/player_sprite.png" id="1_l8h54"]
 [ext_resource type="PackedScene" uid="uid://bq7tg6cfj6qbb" path="res://Utility/hurt_box.tscn" id="3_btcbx"]
+[ext_resource type="Texture2D" uid="uid://bf70y2as2kml5" path="res://Textures/GUI/healthbar.png" id="4_00tjw"]
 [ext_resource type="Texture2D" uid="uid://0li2iq8yc481" path="res://Textures/GUI/exp_background.png" id="4_fhl08"]
 [ext_resource type="Texture2D" uid="uid://blwvpqsi8fn6g" path="res://Textures/GUI/exp_progress.png" id="5_vtle1"]
+[ext_resource type="Texture2D" uid="uid://45fs0qt0rvbb" path="res://Textures/GUI/health.png" id="5_x3vf3"]
 [ext_resource type="FontFile" uid="uid://ca00qd225l4hd" path="res://VampiroAssets/fonts/Gotfridus.otf" id="6_od3ui"]
 [ext_resource type="AudioStream" uid="uid://bq6enb7a6ij36" path="res://Audio/SoundEffect/levelup.ogg" id="7_vtle1"]
 
@@ -99,6 +101,18 @@ anchors_preset = 0
 offset_right = 640.0
 offset_bottom = 360.0
 
+[node name="HealthBar" type="TextureProgressBar" parent="GUILayer/GUI" unique_id=755768606]
+unique_name_in_owner = true
+self_modulate = Color(1, 1, 1, 0.39215687)
+layout_mode = 0
+offset_left = 304.0
+offset_top = 200.0
+offset_right = 336.0
+offset_bottom = 208.0
+value = 50.0
+texture_over = ExtResource("4_00tjw")
+texture_progress = ExtResource("5_x3vf3")
+
 [node name="ExperienceBar" type="TextureProgressBar" parent="GUILayer/GUI" unique_id=1281876228]
 unique_name_in_owner = true
 layout_mode = 0
@@ -150,6 +164,18 @@ offset_bottom = 100.0
 unique_name_in_owner = true
 stream = ExtResource("7_vtle1")
 volume_db = -10.0
+
+[node name="lblTimer" type="Label" parent="GUILayer/GUI" unique_id=796344771]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 280.0
+offset_top = 20.0
+offset_right = 360.0
+offset_bottom = 44.0
+theme_override_fonts/font = ExtResource("6_od3ui")
+text = "00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="hurt" from="HurtBox" to="." method="_on_hurt_box_hurt"]
 [connection signal="timeout" from="Attack/IceSpearTimer" to="." method="_on_ice_spear_timer_timeout"]

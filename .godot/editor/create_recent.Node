@@ -1,15 +1,14 @@
-Node
 Label
+TextureProgressBar
+Node
 TextureRect
 ColorRect
 AudioStreamPlayer
 VBoxContainer
 Panel
-TextureProgressBar
 Control
 CanvasLayer
 CollisionShape2D
 Area2D
 Node2D
 Sprite2D
-Timer
