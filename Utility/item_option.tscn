@@ -38,7 +38,7 @@ offset_right = 132.0
 offset_bottom = 26.0
 theme_override_fonts/font = ExtResource("2_jyb5d")
 theme_override_font_sizes/font_size = 13
-text = "Ice Spear"
+text = "Name"
 
 [node name="lbl_description" type="Label" parent="." unique_id=2131616461]
 layout_mode = 0

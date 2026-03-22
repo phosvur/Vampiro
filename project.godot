@@ -19,6 +19,10 @@ run/main_scene="uid://hccy823mi411"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+UpgradeDb="*uid://ce5ela3ylqwlm"
+
 [display]
 
 window/size/viewport_width=640

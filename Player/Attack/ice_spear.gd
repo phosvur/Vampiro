@@ -17,11 +17,29 @@ func _ready():
 	rotation = angle.angle() + deg_to_rad(135)
 	match level:
 		1:
-			hp = 2
+			hp = 1
 			speed = 100
 			damage = 5
 			knockback_amount = 100
-			attack_size = 1.0
+			attack_size = 1.0 * (1 + player.spell_size)
+		2:
+			hp = 1
+			speed = 100
+			damage = 5
+			knockback_amount = 100
+			attack_size = 1.0 * (1 + player.spell_size) 
+		3:
+			hp = 1
+			speed = 100
+			damage = 8
+			knockback_amount = 100
+			attack_size = 1.0 * (1 + player.spell_size)
+		4:
+			hp = 1
+			speed = 100
+			damage = 8
+			knockback_amount = 100
+			attack_size = 1.0 * (1 + player.spell_size)
 			
 	var tween = create_tween()
 	tween.tween_property(self, "scale", Vector2(1,1) * attack_size, 1)\
@@ -31,17 +49,18 @@ func _ready():
 func _physics_process(delta):
 	position += angle*speed*delta
 	
-#func enemy_hit(charge = 1):
-	#hp -= charge
-	#if hp <= 0:
-		#queue_free()
-		
 func enemy_hit(charge = 1):
-	print("Hit received! Charge:", charge)
 	hp -= charge
 	if hp <= 0:
-		print("Enemy HP is zero or below, dying!")
+		emit_signal("remove_from_array",self)
 		queue_free()
+		
+#func enemy_hit(charge = 1):
+	#print("Hit received! Charge:", charge)
+	#hp -= charge
+	#if hp <= 0:
+		#print("Enemy HP is zero or below, dying!")
+		#queue_free()
 
 func _on_timer_timeout():
 	emit_signal("remove_from_array",self)
