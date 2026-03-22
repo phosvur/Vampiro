@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d31ktfp3jcxda"]
 
 [ext_resource type="Script" uid="uid://bmho65yeqymis" path="res://Enemy/enemy.gd" id="1_0q20x"]
-[ext_resource type="Texture2D" uid="uid://damgf6jet7wnn" path="res://VampiroAssets/characters/Skull/Bones_SingleSkull_Fly.png" id="2_0q20x"]
+[ext_resource type="Texture2D" uid="uid://c1vy58npxgtd7" path="res://VampiroAssets/newBones_SingleSkull_Fly.png" id="2_0q20x"]
 [ext_resource type="PackedScene" uid="uid://bq7tg6cfj6qbb" path="res://Utility/hurt_box.tscn" id="3_6b3mk"]
 [ext_resource type="PackedScene" uid="uid://bacrfrx83p3dv" path="res://Utility/hit_box.tscn" id="4_7c4qo"]
 [ext_resource type="AudioStream" uid="uid://cgiw2d66vtt6e" path="res://Audio/SoundEffect/enemy_hit.ogg" id="5_pfiqr"]
@@ -54,7 +54,7 @@ size = Vector2(10, 11)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eqilm"]
 size = Vector2(6.5, 8)
 
-[node name="enemy_kobold_weak" type="CharacterBody2D" unique_id=1882834488]
+[node name="enemy_skull_weak" type="CharacterBody2D" unique_id=1882834488]
 collision_layer = 5
 collision_mask = 5
 motion_mode = 1

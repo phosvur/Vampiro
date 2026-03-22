@@ -3,17 +3,15 @@
 [ext_resource type="Texture2D" uid="uid://fadb38jhmurk" path="res://Textures/dirt_full_new.png" id="1_62w18"]
 [ext_resource type="PackedScene" uid="uid://8ldeawdekyhn" path="res://Player/player.tscn" id="2_8a836"]
 [ext_resource type="PackedScene" uid="uid://bd328vods7y4u" path="res://Utility/enemy_spawner.tscn" id="3_j8job"]
-[ext_resource type="PackedScene" uid="uid://b28dcrwiyqa6w" path="res://Objects/experience_gem.tscn" id="4_3f78f"]
 [ext_resource type="Script" uid="uid://cabh720n5vqol" path="res://Utility/spawn_info.gd" id="4_yf0ba"]
-[ext_resource type="PackedScene" uid="uid://cidwn76xquuqy" path="res://Enemy/enemy_kobold_weak.tscn" id="5_eidgh"]
 [ext_resource type="PackedScene" uid="uid://d31ktfp3jcxda" path="res://Enemy/enemy_skull_weak.tscn" id="6_eidgh"]
 [ext_resource type="PackedScene" uid="uid://blfpemdbjnpsk" path="res://Enemy/enemy_kobold_strong.tscn" id="6_oe8m4"]
 
 [sub_resource type="Resource" id="Resource_k354k"]
 script = ExtResource("4_yf0ba")
-time_end = 120
-enemy = ExtResource("5_eidgh")
-enemy_num = 5
+time_end = 30
+enemy = ExtResource("6_eidgh")
+enemy_num = 2
 enemy_spawn_delay = 1
 metadata/_custom_type_script = "uid://cabh720n5vqol"
 
@@ -99,6 +97,3 @@ position = Vector2(102, 63)
 spawns = Array[ExtResource("4_yf0ba")]([SubResource("Resource_k354k"), SubResource("Resource_w47uh"), SubResource("Resource_lo5ox"), SubResource("Resource_h2aik"), SubResource("Resource_0wqet"), SubResource("Resource_awrha"), SubResource("Resource_f23eu"), SubResource("Resource_oeat8"), SubResource("Resource_5xkvv")])
 
 [node name="Loot" type="Node2D" parent="." unique_id=1872018630 groups=["loot"]]
-
-[node name="ExperienceGem" parent="Loot" unique_id=1582638704 instance=ExtResource("4_3f78f")]
-experience = 10

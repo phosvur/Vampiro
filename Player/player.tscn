@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://8ldeawdekyhn"]
 
 [ext_resource type="Script" uid="uid://ch8ykj76s6uy0" path="res://Player/player.gd" id="1_4ntmi"]
-[ext_resource type="Texture2D" uid="uid://djjj7b0nu36db" path="res://Textures/Player/player_sprite.png" id="1_l8h54"]
+[ext_resource type="Texture2D" uid="uid://00x5ric2jcul" path="res://VampiroAssets/characters/Knight/Wight_Knight_Pixel_art_Movement_walk_forward.png" id="2_00tjw"]
 [ext_resource type="PackedScene" uid="uid://bq7tg6cfj6qbb" path="res://Utility/hurt_box.tscn" id="3_btcbx"]
 [ext_resource type="Texture2D" uid="uid://bf70y2as2kml5" path="res://Textures/GUI/healthbar.png" id="4_00tjw"]
 [ext_resource type="Texture2D" uid="uid://0li2iq8yc481" path="res://Textures/GUI/exp_background.png" id="4_fhl08"]
@@ -9,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://45fs0qt0rvbb" path="res://Textures/GUI/health.png" id="5_x3vf3"]
 [ext_resource type="FontFile" uid="uid://ca00qd225l4hd" path="res://VampiroAssets/fonts/Gotfridus.otf" id="6_od3ui"]
 [ext_resource type="AudioStream" uid="uid://bq6enb7a6ij36" path="res://Audio/SoundEffect/levelup.ogg" id="7_vtle1"]
+[ext_resource type="AudioStream" uid="uid://lejyn22twg4l" path="res://Audio/SoundEffect/Victory.wav" id="10_5htga"]
+[ext_resource type="AudioStream" uid="uid://w343b4x5tvtw" path="res://Audio/SoundEffect/Lose.ogg" id="11_p5o4e"]
+[ext_resource type="PackedScene" uid="uid://b76i4thcriaxl" path="res://Utility/basic_button.tscn" id="12_gu6f8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4ntmi"]
 radius = 5.0
@@ -30,8 +33,11 @@ motion_mode = 1
 script = ExtResource("1_4ntmi")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=604066874]
-texture = ExtResource("1_l8h54")
-hframes = 2
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_00tjw")
+hframes = 10
+vframes = 4
+frame = 21
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2068044585]
 
@@ -41,7 +47,7 @@ shape = SubResource("CapsuleShape2D_4ntmi")
 
 [node name="walkTimer" type="Timer" parent="." unique_id=469472862]
 unique_name_in_owner = true
-wait_time = 0.2
+wait_time = 0.05
 one_shot = true
 
 [node name="HurtBox" parent="." unique_id=1217112602 instance=ExtResource("3_btcbx")]
@@ -136,7 +142,6 @@ vertical_alignment = 1
 [node name="LevelUp" type="Panel" parent="GUILayer/GUI" unique_id=711631667]
 unique_name_in_owner = true
 process_mode = 2
-visible = false
 layout_mode = 0
 offset_left = 800.0
 offset_top = 50.0
@@ -164,6 +169,43 @@ offset_bottom = 100.0
 unique_name_in_owner = true
 stream = ExtResource("7_vtle1")
 volume_db = -10.0
+
+[node name="DeathPanel" type="Panel" parent="GUILayer/GUI" unique_id=467956256]
+unique_name_in_owner = true
+process_mode = 2
+layout_mode = 0
+offset_left = 357.0
+offset_top = -293.0
+offset_right = 557.0
+offset_bottom = -43.0
+
+[node name="lbl_Result" type="Label" parent="GUILayer/GUI/DeathPanel" unique_id=1220522149]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 50.0
+theme_override_fonts/font = ExtResource("6_od3ui")
+text = "Result"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="snd_victory" type="AudioStreamPlayer" parent="GUILayer/GUI/DeathPanel" unique_id=2110655772]
+unique_name_in_owner = true
+stream = ExtResource("10_5htga")
+volume_db = -10.0
+
+[node name="snd_lose" type="AudioStreamPlayer" parent="GUILayer/GUI/DeathPanel" unique_id=26545425]
+unique_name_in_owner = true
+stream = ExtResource("11_p5o4e")
+volume_db = -10.0
+
+[node name="btn_menu" parent="GUILayer/GUI/DeathPanel" unique_id=1261441914 instance=ExtResource("12_gu6f8")]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 203.0
+offset_right = 160.0
+offset_bottom = 235.0
+text = "Menu"
 
 [node name="lblTimer" type="Label" parent="GUILayer/GUI" unique_id=796344771]
 unique_name_in_owner = true

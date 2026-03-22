@@ -61,6 +61,11 @@ var enemy_close = []
 @onready var collectedUpgrades = get_node("%CollectedUpgrades")
 @onready var itemContainer = preload("res://Player/GUI/item_container.tscn")
 
+@onready var deathPanel = get_node("%DeathPanel")
+@onready var lblResult = get_node("%lbl_Result")
+@onready var sndVictory = get_node("%snd_victory")
+@onready var sndLose = get_node("%snd_lose")
+
 func _ready():
 	upgrade_character("icespear1")
 	attack()
@@ -75,9 +80,11 @@ func movement():
 	var y_mov = Input.get_action_strength("down") - Input.get_action_strength("up")
 	var mov = Vector2(x_mov, y_mov)
 	if mov.x > 0:
-		sprite.flip_h = true
-	elif mov.x < 0:
+		#sprite.flip_h = true
 		sprite.flip_h = false
+	elif mov.x < 0:
+		#sprite.flip_h = false
+		sprite.flip_h = true
 		
 	if mov != Vector2.ZERO:
 		last_movement = mov
@@ -107,7 +114,7 @@ func _on_hurt_box_hurt(damage, _angle, _knockback):
 	healthBar.value = hp
 	
 	if hp <= 0:
-		game_over()
+		death()
 
 
 func _on_ice_spear_timer_timeout():
@@ -162,15 +169,23 @@ func _on_enemy_detection_area_body_exited(body):
 	if enemy_close.has(body):
 		enemy_close.erase(body)
 
-func game_over():
-	print("Game Over!")
+func death():
+	deathPanel.visible = true
 	get_tree().paused = true
 
 
 func _on_grab_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("loot"):
 		area.target = self
-
+		var tween = deathPanel.create_tween()
+		tween.tween_property(deathPanel,"position",Vector2(220,50),3.0).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_OUT)
+		tween.play()
+		if time >= 200:
+			lblResult.text = "You Win"
+			sndVictory.play()
+		else:
+			lblResult.text = "You Lose"
+			sndLose.play()
 
 func _on_collect_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("loot"):
