@@ -166,3 +166,20 @@ If you try the game, feel free to:
 ---
 
 Thanks for playing *Vampiro*!
+
+---
+
+## 📜 Changelog
+
+### v1.0 (Production Release)
+
+- Added Ice Spear and Tornado attack systems
+- Implemented enemy spawning and scaling difficulty
+- Added player movement and animation system
+- Implemented hitbox / hurtbox combat system
+- Added knockback and enemy death behavior
+- Fixed double damage issue caused by knockback
+- Implemented game over system
+- Adjusted enemy spawn balance
+- Improved audio volume levels
+- General bug fixes and stability improvements
