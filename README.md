@@ -98,12 +98,19 @@ This project was heavily guided by a Vampire Survivors-style tutorial.
 * SurvivorsClone Audio (by brannotaylor)
   [https://github.com/brannotaylor/SurvivorsClone_Complete/tree/main/Audio](https://github.com/brannotaylor/SurvivorsClone_Complete/tree/main/Audio)
 
+* Baron's Music pack
+  [https://eric-the-funny-baron.itch.io/barons-music-pack](https://eric-the-funny-baron.itch.io/barons-music-pack)
+
 ---
 
 ### 🎨 Visual & UI Assets
 
 * Gotfridus Font
   [https://ggbot.itch.io/gotfridus-font](https://ggbot.itch.io/gotfridus-font)
+* Gothic Coffin Asset – itch.io
+  [https://karnationkarnage.itch.io/gothic-coffin-asset](https://karnationkarnage.itch.io/gothic-coffin-asset)
+* Dark Gothic Castle Background (Start Menu) – itch.io
+  [https://pixel-1992.itch.io/free-pixel-art-background-dark-gothic-caslte-and-entrance-sprite](https://pixel-1992.itch.io/free-pixel-art-background-dark-gothic-caslte-and-entrance-sprite)
 
 ---
 
@@ -126,6 +133,12 @@ This project was heavily guided by a Vampire Survivors-style tutorial.
   [https://www.youtube.com/watch?v=lZJIvhMehv4](https://www.youtube.com/watch?v=lZJIvhMehv4)
 
 ---
+
+## Video Demo
+
+[Youtube Video](https://youtu.be/NXj-PR0m_o0?si=9MLOKdnmwCysK1en)
+
+--- 
 
 ## 🤖 AI Use Declaration
 
