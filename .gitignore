@@ -1,0 +1,30 @@
+# Godot project files
+.import/
+.export/
+*.godot
+*.mono/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Logs & temp
+*.log
+*.tmp
+
+# Assets
+VampiroAssets/
+
+# Builds / exports (IMPORTANT)
+*.exe
+*.x86_64
+*.zip
+*.pck
+
+# Export folders (common naming)
+build/
+builds/
+exports/
+
+# Godot export presets (optional to ignore)
+export_presets.cfg
