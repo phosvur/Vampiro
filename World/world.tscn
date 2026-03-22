@@ -17,3 +17,5 @@ region_rect = Rect2(0, 0, 4000, 4000)
 position = Vector2(102, 63)
 
 [node name="EnemySpawner" parent="." unique_id=1560039486 instance=ExtResource("3_j8job")]
+
+[node name="Loot" type="Node2D" parent="." unique_id=1872018630 groups=["loot"]]

@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://ch8ykj76s6uy0" path="res://Player/player.gd" id="1_4ntmi"]
 [ext_resource type="Texture2D" uid="uid://djjj7b0nu36db" path="res://Textures/Player/player_sprite.png" id="1_l8h54"]
 [ext_resource type="PackedScene" uid="uid://bq7tg6cfj6qbb" path="res://Utility/hurt_box.tscn" id="3_btcbx"]
+[ext_resource type="Texture2D" uid="uid://0li2iq8yc481" path="res://Textures/GUI/exp_background.png" id="4_fhl08"]
+[ext_resource type="Texture2D" uid="uid://blwvpqsi8fn6g" path="res://Textures/GUI/exp_progress.png" id="5_vtle1"]
+[ext_resource type="FontFile" uid="uid://ca00qd225l4hd" path="res://VampiroAssets/fonts/Gotfridus.otf" id="6_od3ui"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4ntmi"]
 radius = 5.0
@@ -13,6 +16,11 @@ size = Vector2(11, 16)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_btcbx"]
 radius = 367.8872
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gwnis"]
+radius = 50.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k53q1"]
 
 [node name="Player" type="CharacterBody2D" unique_id=1959000591 groups=["player"]]
 motion_mode = 1
@@ -60,12 +68,55 @@ unique_name_in_owner = true
 wait_time = 0.2
 
 [node name="EnemyDetectionArea" type="Area2D" parent="." unique_id=1931068655]
+visible = false
 collision_layer = 4
 collision_mask = 4
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyDetectionArea" unique_id=1097622126]
 shape = SubResource("CircleShape2D_btcbx")
+
+[node name="GrabArea" type="Area2D" parent="." unique_id=1363387801]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrabArea" unique_id=1302930049]
+shape = SubResource("CircleShape2D_gwnis")
+
+[node name="CollectArea" type="Area2D" parent="." unique_id=1668400887]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectArea" unique_id=214969947]
+shape = SubResource("CircleShape2D_k53q1")
+
+[node name="GUILayer" type="CanvasLayer" parent="." unique_id=1486494315]
+
+[node name="GUI" type="Control" parent="GUILayer" unique_id=585614489]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 360.0
+
+[node name="ExperienceBar" type="TextureProgressBar" parent="GUILayer/GUI" unique_id=1281876228]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_under = ExtResource("4_fhl08")
+texture_progress = ExtResource("5_vtle1")
+
+[node name="lbl_level" type="Label" parent="GUILayer/GUI/ExperienceBar" unique_id=1992362946]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 540.0
+offset_right = 640.0
+offset_bottom = 20.0
+theme_override_fonts/font = ExtResource("6_od3ui")
+theme_override_font_sizes/font_size = 15
+text = "Level: 1"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="hurt" from="HurtBox" to="." method="_on_hurt_box_hurt"]
 [connection signal="timeout" from="Attack/IceSpearTimer" to="." method="_on_ice_spear_timer_timeout"]
@@ -74,5 +125,7 @@ shape = SubResource("CircleShape2D_btcbx")
 [connection signal="timeout" from="Attack/TornadoTimer/TornadoAttackTimer" to="." method="_on_tornado_attack_timer_timeout"]
 [connection signal="body_entered" from="EnemyDetectionArea" to="." method="_on_enemy_detection_area_body_entered"]
 [connection signal="body_exited" from="EnemyDetectionArea" to="." method="_on_enemy_detection_area_body_exited"]
+[connection signal="area_entered" from="GrabArea" to="." method="_on_grab_area_area_entered"]
+[connection signal="area_entered" from="CollectArea" to="." method="_on_collect_area_area_entered"]
 
 [editable path="HurtBox"]
