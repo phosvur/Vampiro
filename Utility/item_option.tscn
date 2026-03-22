@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://bt6navmu0klpn" path="res://Utility/item_option.gd" id="1_jyb5d"]
 [ext_resource type="Texture2D" uid="uid://jjy043vpgln5" path="res://Textures/Items/Weapons/ice_spear.png" id="1_k7luv"]
 [ext_resource type="FontFile" uid="uid://ca00qd225l4hd" path="res://VampiroAssets/fonts/Gotfridus.otf" id="2_jyb5d"]
-[ext_resource type="FontFile" uid="uid://da1wdgddvjtnk" path="res://Font/tenderness.otf" id="3_h2inl"]
 
 [node name="ItemOption" type="ColorRect" unique_id=2080789018]
 custom_minimum_size = Vector2(180, 50)
@@ -46,8 +45,8 @@ offset_left = 4.0
 offset_top = 27.0
 offset_right = 166.0
 offset_bottom = 48.0
-theme_override_fonts/font = ExtResource("3_h2inl")
-theme_override_font_sizes/font_size = 8
+theme_override_fonts/font = ExtResource("2_jyb5d")
+theme_override_font_sizes/font_size = 6
 text = "Description of item"
 autowrap_mode = 3
 
@@ -57,8 +56,8 @@ offset_left = 130.0
 offset_top = 3.0
 offset_right = 177.0
 offset_bottom = 26.0
-theme_override_fonts/font = ExtResource("3_h2inl")
-theme_override_font_sizes/font_size = 12
+theme_override_fonts/font = ExtResource("2_jyb5d")
+theme_override_font_sizes/font_size = 10
 text = "level: 1"
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

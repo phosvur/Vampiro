@@ -1,15 +1,15 @@
 72322a848ab928aa5c89f0cb78209805
-::res://::1774210745
+::res://::1774211209
 CoffinOpen.icns::OtherFile::-1::1774207682::0::1::::<><><>0<>0<><>::
 CoffinOpen.ico::OtherFile::-1::1774207381::0::1::::<><><>0<>0<><>::
 CoffinOpen.png::CompressedTexture2D::407463136262358206::1774199992::1774208035::1::::<><><>0<>0<>a16755f2add900f2db3a8eb441cce5ef<>res://.godot/imported/CoffinOpen.png-fbcbaa6b5b63130ae3a43451c86f04fb.ctex::
-export_presets.cfg::TextFile::-1::1774199992::0::1::::<><><>0<>0<><>::
+export_presets.cfg::TextFile::-1::1774211136::0::1::::<><><>0<>0<><>::
 README.md::TextFile::-1::1774210605::0::1::::<><><>0<>0<><>::
 ::res://Audio/::1771575913
 ::res://Audio/GUI/::1774199992
 click.wav::AudioStreamWAV::209782873085368979::1774199992::1774199992::1::::<><><>0<>0<>3cb5fc4f7f9714170b3c1f38e865c2d9<>res://.godot/imported/click.wav-ac274a157c89845a9b7a5b24b039f8cf.sample::
 hover.wav::AudioStreamWAV::3742014360982180648::1774199992::1774199992::1::::<><><>0<>0<>fc7ab4e8e786ec0d467895e6fcf19bbc<>res://.godot/imported/hover.wav-0a18f40a9c403c52e37760fc74ce5ff3.sample::
-::res://Audio/Music/::1774210773
+::res://Audio/Music/::1774210840
 Battle Moment.ogg::AudioStreamOggVorbis::2505378343356021264::1553414192::1774206262::1::::<><><>0<>0<>a07eb16ba5ab47cba5f4dd409ca7fa19<>res://.godot/imported/Battle Moment.ogg-67912f57978d79aff77f23511dfa0352.oggvorbisstr::
 snd_Music.gd::GDScript::2180834730547204770::1774206442::0::1::::<>AudioStreamPlayer<><>0<>0<><>::
 ::res://Audio/SoundEffect/::1774199992
@@ -22,22 +22,22 @@ Lose.ogg::AudioStreamOggVorbis::1603768030578505480::1774199992::1774199992::1::
 tornado.ogg::AudioStreamOggVorbis::4595565386450734093::1774199992::1774199992::1::::<><><>0<>0<>967a3a06648de7ee049f95c4f8b5983c<>res://.godot/imported/tornado.ogg-905b83d8ef1ce0aac3ced9ac6eac1455.oggvorbisstr::
 Victory.wav::AudioStreamWAV::780924828789501565::1774199992::1774199992::1::::<><><>0<>0<>70d60e0a556dfb33932fb163b4562f7a<>res://.godot/imported/Victory.wav-bd3be9d6414a4a02503c4b72ad5dc7da.sample::
 woosh.wav::AudioStreamWAV::6932302943556848040::1774199992::1774199992::1::::<><><>0<>0<>14895d3b2734efd05de7248fc6f8d57e<>res://.godot/imported/woosh.wav-ab061df73379afad44a9e04e929634d6.sample::
-::res://Enemy/::1774210014
+::res://Enemy/::1774210853
 enemy.gd::GDScript::3244044462117581202::1774199992::0::1::::<>CharacterBody2D<><>0<>0<><>::
 enemy_canine_strong.tscn::PackedScene::8762400458059839864::1774209488::0::1::::<><><>0<>0<><>::uid://bmho65yeqymis::::res://Enemy/enemy.gd<>uid://cmd0cojixcdiq::::res://Textures/Enemy/Canine_Black_Run.png<>uid://bq7tg6cfj6qbb::::res://Utility/hurt_box.tscn<>uid://bacrfrx83p3dv::::res://Utility/hit_box.tscn<>uid://cgiw2d66vtt6e::::res://Audio/SoundEffect/enemy_hit.ogg
-enemy_kobold_strong.tscn::PackedScene::3169738385521479042::1774209558::0::1::::<><><>0<>0<><>::uid://bmho65yeqymis::::res://Enemy/enemy.gd<>uid://b4gvyakkncrup::::res://Textures/Enemy/kolbold_strong.png<>uid://bq7tg6cfj6qbb::::res://Utility/hurt_box.tscn<>uid://bacrfrx83p3dv::::res://Utility/hit_box.tscn<>uid://cgiw2d66vtt6e::::res://Audio/SoundEffect/enemy_hit.ogg
+enemy_kobold_strong.tscn::PackedScene::3169738385521479042::1774210853::0::1::::<><><>0<>0<><>::uid://bmho65yeqymis::::res://Enemy/enemy.gd<>uid://b4gvyakkncrup::::res://Textures/Enemy/kolbold_strong.png<>uid://bq7tg6cfj6qbb::::res://Utility/hurt_box.tscn<>uid://bacrfrx83p3dv::::res://Utility/hit_box.tscn<>uid://cgiw2d66vtt6e::::res://Audio/SoundEffect/enemy_hit.ogg
 enemy_kobold_weak.tscn::PackedScene::5341905968617613768::1774199992::0::1::::<><><>0<>0<><>::uid://bmho65yeqymis::::res://Enemy/enemy.gd<>uid://db818yudlpwb6::::res://Textures/Enemy/kolbold_weak.png<>uid://bq7tg6cfj6qbb::::res://Utility/hurt_box.tscn<>uid://bacrfrx83p3dv::::res://Utility/hit_box.tscn<>uid://cgiw2d66vtt6e::::res://Audio/SoundEffect/enemy_hit.ogg
 enemy_skull_weak.tscn::PackedScene::9178864881634762914::1774209547::0::1::::<><><>0<>0<><>::uid://bmho65yeqymis::::res://Enemy/enemy.gd<>uid://dofeyx274r8kt::::res://Textures/Enemy/newBones_SingleSkull_Fly.png<>uid://bq7tg6cfj6qbb::::res://Utility/hurt_box.tscn<>uid://bacrfrx83p3dv::::res://Utility/hit_box.tscn<>uid://cgiw2d66vtt6e::::res://Audio/SoundEffect/enemy_hit.ogg
 explosion.gd::GDScript::5948679525279759921::1774199992::0::1::::<>Sprite2D<><>0<>0<><>::
 explosion.tscn::PackedScene::6933437063830165436::1774199992::0::1::::<><><>0<>0<><>::uid://ba78he6xtgb3l::::res://Textures/Enemy/explosion_pixelfied.png<>uid://ccgsdrd8onbmh::::res://Audio/SoundEffect/enemy_death.ogg<>uid://cq0t5amntdl58::::res://Enemy/explosion.gd
-enemy_bat_strong.tscn::PackedScene::4685949597789347393::1774210014::0::1::::<><><>0<>0<><>::uid://bmho65yeqymis::::res://Enemy/enemy.gd<>uid://m748b1viyllp::::res://Textures/Enemy/Bat_Fly.png<>uid://bq7tg6cfj6qbb::::res://Utility/hurt_box.tscn<>uid://bacrfrx83p3dv::::res://Utility/hit_box.tscn<>uid://cgiw2d66vtt6e::::res://Audio/SoundEffect/enemy_hit.ogg
-::res://Font/::1774210793
+enemy_bat_strong.tscn::PackedScene::4685949597789347393::1774210844::0::1::::<><><>0<>0<><>::uid://bmho65yeqymis::::res://Enemy/enemy.gd<>uid://m748b1viyllp::::res://Textures/Enemy/Bat_Fly.png<>uid://bq7tg6cfj6qbb::::res://Utility/hurt_box.tscn<>uid://bacrfrx83p3dv::::res://Utility/hit_box.tscn<>uid://cgiw2d66vtt6e::::res://Audio/SoundEffect/enemy_hit.ogg
+::res://Font/::1774210840
 ::res://Objects/::1774199992
 experience_gem.gd::GDScript::8480687985506748631::1774199992::0::1::::<>Area2D<><>0<>0<><>::
 experience_gem.tscn::PackedScene::4349830577648892212::1774199992::0::1::::<><><>0<>0<><>::uid://rj4prxjqm3qv::::res://Textures/Items/Gems/Gem_green.png<>uid://ds3dxsbn1omm6::::res://Objects/experience_gem.gd<>uid://ll7w5usff4jv::::res://Audio/SoundEffect/collectgem.mp3
-::res://Player/::1774206442
+::res://Player/::1774212100
 player.gd::GDScript::5333763328079532689::1774206442::0::1::::<>CharacterBody2D<><>0<>0<><>::
-player.tscn::PackedScene::2339129323631414987::1774205553::0::1::::<><><>0<>0<><>::uid://ch8ykj76s6uy0::::res://Player/player.gd<>uid://00x5ric2jcul::::res://VampiroAssets/characters/Knight/Wight_Knight_Pixel_art_Movement_walk_forward.png<>uid://bq7tg6cfj6qbb::::res://Utility/hurt_box.tscn<>uid://bf70y2as2kml5::::res://Textures/GUI/healthbar.png<>uid://0li2iq8yc481::::res://Textures/GUI/exp_background.png<>uid://blwvpqsi8fn6g::::res://Textures/GUI/exp_progress.png<>uid://45fs0qt0rvbb::::res://Textures/GUI/health.png<>uid://ca00qd225l4hd::::res://VampiroAssets/fonts/Gotfridus.otf<>uid://bq6enb7a6ij36::::res://Audio/SoundEffect/levelup.ogg<>uid://lejyn22twg4l::::res://Audio/SoundEffect/Victory.wav<>uid://w343b4x5tvtw::::res://Audio/SoundEffect/Lose.ogg<>uid://b76i4thcriaxl::::res://Utility/basic_button.tscn
+player.tscn::PackedScene::2339129323631414987::1774212100::0::1::::<><><>0<>0<><>::uid://ch8ykj76s6uy0::::res://Player/player.gd<>res://VampiroAssets/characters/Knight/Wight_Knight_Pixel_art_Movement_walk_forward.png<>uid://bq7tg6cfj6qbb::::res://Utility/hurt_box.tscn<>uid://bf70y2as2kml5::::res://Textures/GUI/healthbar.png<>uid://0li2iq8yc481::::res://Textures/GUI/exp_background.png<>uid://blwvpqsi8fn6g::::res://Textures/GUI/exp_progress.png<>uid://45fs0qt0rvbb::::res://Textures/GUI/health.png<>uid://ca00qd225l4hd::::res://VampiroAssets/fonts/Gotfridus.otf<>uid://bq6enb7a6ij36::::res://Audio/SoundEffect/levelup.ogg<>uid://lejyn22twg4l::::res://Audio/SoundEffect/Victory.wav<>uid://w343b4x5tvtw::::res://Audio/SoundEffect/Lose.ogg<>uid://b76i4thcriaxl::::res://Utility/basic_button.tscn
 ::res://Player/Attack/::1774199992
 ice_spear.gd::GDScript::9142543266784622114::1774199992::0::1::::<>Area2D<><>0<>0<><>::
 ice_spear.tscn::PackedScene::3364830321361599271::1774199992::0::1::::<><><>0<>0<><>::uid://d3iyl70tnp5jq::::res://Player/Attack/ice_spear.gd<>uid://jjy043vpgln5::::res://Textures/Items/Weapons/ice_spear.png<>uid://byjcuax3tfl3j::::res://Audio/SoundEffect/ice.wav
@@ -48,7 +48,7 @@ item_container.gd::GDScript::6608486170313664161::1774199992::0::1::::<>TextureR
 item_container.tscn::PackedScene::6636205919785621137::1774199992::0::1::::<><><>0<>0<><>::uid://d4arkicu70pix::::res://Textures/GUI/EmptyItem.png<>uid://c1fg2i1sfbnrt::::res://Player/GUI/item_container.gd
 ::res://Textures/::1774199992
 dirt_full_new.png::CompressedTexture2D::351129677013484492::1774199992::1774199992::1::::<><><>0<>0<>06dc6a772ccf8e724e1730cb86b8f6bc<>res://.godot/imported/dirt_full_new.png-d85788bb1f068f5a851e8191cbb530c8.ctex::
-::res://Textures/Enemy/::1774210819
+::res://Textures/Enemy/::1774210840
 Bat_Fly.png::CompressedTexture2D::910146029429446417::1774199992::1774208751::1::::<><><>0<>0<>06c62f498bc8f0b29b3a19c592d1165c<>res://.godot/imported/Bat_Fly.png-abb9dc07610ece7a5ede5dfdce99c8c9.ctex::
 Canine_Black_Run.png::CompressedTexture2D::5622822870336184684::1774199992::1774208751::1::::<><><>0<>0<>4a84095164156a4706a044d2b973553d<>res://.godot/imported/Canine_Black_Run.png-190d7811787e26d838b6504b17f96f4e.ctex::
 explosion_pixelfied.png::CompressedTexture2D::2454497192194622023::1774199992::1774199992::1::::<><><>0<>0<>a585bd4f133674e2d7a49b6094c53ccc<>res://.godot/imported/explosion_pixelfied.png-99d71405af5333f68dea5cbf1e273230.ctex::
@@ -80,8 +80,9 @@ javelin_3_new.png::CompressedTexture2D::7601636465754509610::1774199992::1774199
 javelin_3_new_attack.png::CompressedTexture2D::2276509254308112616::1774199992::1774199992::1::::<><><>0<>0<>5e604c7a343710bd97c40ff25c353f22<>res://.godot/imported/javelin_3_new_attack.png-830d039410fc8e4042b2ab08a0ef517e.ctex::
 sword.png::CompressedTexture2D::4893975718358543436::1774199992::1774199992::1::::<><><>0<>0<>8b2a5baa7b10fa76b4278f58d934efdc<>res://.godot/imported/sword.png-979d87b34967510545433b49f3482194.ctex::
 tornado.png::CompressedTexture2D::4063120281928925555::1774199992::1774199992::1::::<><><>0<>0<>b2edbad387374fbd0bb396d280682f15<>res://.godot/imported/tornado.png-84bd3c437635d0edcdda9f5a76ecfe31.ctex::
-::res://Textures/Player/::1774199992
+::res://Textures/Player/::1774212339
 player_sprite.png::CompressedTexture2D::7810144733709971683::1774199992::1774199992::1::::<><><>0<>0<>90bd3fdf70fccfd8b9c2df939cdee454<>res://.godot/imported/player_sprite.png-99975927c87d39d0f4e4a4a21b6d0fe5.ctex::
+Wight_Knight_Pixel_art_Movement_walk_forward.png::CompressedTexture2D::172243878789485825::1712204584::1774212347::1::::<><><>0<>0<>f8511ea3d55d86b710664fecbd9cd35e<>res://.godot/imported/Wight_Knight_Pixel_art_Movement_walk_forward.png-560e953dd08b6332b10bfaff7a7dcba7.ctex::
 ::res://TitleScreen/::1774209976
 menu.gd::GDScript::6748717119072117445::1774204402::0::1::::<>Control<><>0<>0<><>::
 menu.tscn::PackedScene::4876760579888083688::1774209976::0::1::::<><><>0<>0<><>::uid://c3fendaefklsv::::res://TitleScreen/menu.gd<>uid://cen5bmos5amwt::::res://VampiroAssets/HR_Dark Gothic Castle.png<>uid://ca00qd225l4hd::::res://VampiroAssets/fonts/Gotfridus.otf<>uid://b76i4thcriaxl::::res://Utility/basic_button.tscn
@@ -99,7 +100,7 @@ item_option.tscn::PackedScene::2902056259072562206::1774199992::0::1::::<><><>0<
 spawn_info.gd::GDScript::4775389366876743055::1774199992::0::1::::Spawn_info<>Resource<><>0<>0<><>::
 upgrade_db.gd::GDScript::6883066034489994625::1774199992::0::1::::<>Node<><>0<>0<><>::
 upgrade_db.tscn::PackedScene::5115790630624472842::1774199992::0::1::::<><><>0<>0<><>::uid://c5chdekm2wfef::::res://Utility/upgrade_db.gd
-::res://VampiroAssets/::1774210731
+::res://VampiroAssets/::1774210840
 HR_Dark Gothic Castle.png::CompressedTexture2D::6835137916293115683::1774199992::1774210840::1::::<><><>0<>0<>b62a1e91f18d5c41fec7dbfabfadfd7a<>res://.godot/imported/HR_Dark Gothic Castle.png-04e65a27d520751ff8fcc08ff50df5d6.ctex::
 ::res://VampiroAssets/fonts/::1774199992
 Gotfridus.otf::FontFile::4825997509306418749::1774199992::1774199992::1::::<><><>0<>0<>035fe881b111ef18a15982f2daa73c20<>res://.godot/imported/Gotfridus.otf-5b26944149fdd6fef4d0d3dd9c360606.fontdata::

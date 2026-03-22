@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://8ldeawdekyhn"]
 
 [ext_resource type="Script" uid="uid://ch8ykj76s6uy0" path="res://Player/player.gd" id="1_4ntmi"]
-[ext_resource type="Texture2D" uid="uid://00x5ric2jcul" path="res://VampiroAssets/characters/Knight/Wight_Knight_Pixel_art_Movement_walk_forward.png" id="2_00tjw"]
+[ext_resource type="Texture2D" uid="uid://cpo3jiaenmbh" path="res://Textures/Player/Wight_Knight_Pixel_art_Movement_walk_forward.png" id="2_5htga"]
 [ext_resource type="PackedScene" uid="uid://bq7tg6cfj6qbb" path="res://Utility/hurt_box.tscn" id="3_btcbx"]
 [ext_resource type="Texture2D" uid="uid://bf70y2as2kml5" path="res://Textures/GUI/healthbar.png" id="4_00tjw"]
 [ext_resource type="Texture2D" uid="uid://0li2iq8yc481" path="res://Textures/GUI/exp_background.png" id="4_fhl08"]
@@ -33,8 +33,9 @@ motion_mode = 1
 script = ExtResource("1_4ntmi")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=604066874]
+position = Vector2(-1, -9)
 scale = Vector2(0.4, 0.4)
-texture = ExtResource("2_00tjw")
+texture = ExtResource("2_5htga")
 hframes = 10
 vframes = 4
 frame = 21
