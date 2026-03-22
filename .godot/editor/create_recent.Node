@@ -1,11 +1,11 @@
 AudioStreamPlayer
+Label
+ColorRect
 Button
 GridContainer
 TextureRect
-Label
 TextureProgressBar
 Node
-ColorRect
 VBoxContainer
 Panel
 Control

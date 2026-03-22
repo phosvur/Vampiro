@@ -66,6 +66,9 @@ var enemy_close = []
 @onready var sndVictory = get_node("%snd_victory")
 @onready var sndLose = get_node("%snd_lose")
 
+# Signal
+signal playerdeath
+
 func _ready():
 	upgrade_character("icespear1")
 	attack()
@@ -171,21 +174,22 @@ func _on_enemy_detection_area_body_exited(body):
 
 func death():
 	deathPanel.visible = true
+	emit_signal("playerdeath")
 	get_tree().paused = true
+	var tween = deathPanel.create_tween()
+	tween.tween_property(deathPanel,"position",Vector2(220,50),3.0).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_OUT)
+	tween.play()
+	if time >= 200:
+		lblResult.text = "You Win"
+		sndVictory.play()
+	else:
+		lblResult.text = "You Lose"
+		sndLose.play()
 
 
 func _on_grab_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("loot"):
 		area.target = self
-		var tween = deathPanel.create_tween()
-		tween.tween_property(deathPanel,"position",Vector2(220,50),3.0).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_OUT)
-		tween.play()
-		if time >= 200:
-			lblResult.text = "You Win"
-			sndVictory.play()
-		else:
-			lblResult.text = "You Lose"
-			sndLose.play()
 
 func _on_collect_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("loot"):
@@ -360,3 +364,8 @@ func adjust_gui_collection(upgrade):
 					collectedWeapons.add_child(new_item)
 				"upgrade":
 					collectedUpgrades.add_child(new_item)
+
+
+func _on_btn_menu_click_end() -> void:
+	get_tree().paused = false
+	var _level = get_tree().change_scene_to_file("res://TitleScreen/menu.tscn")

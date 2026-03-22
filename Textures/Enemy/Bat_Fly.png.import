@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhe4usjvxkj"
-path="res://.godot/imported/Canine_Black_Run.png-d3b5ce6ac19c3933b990d69b49aa46bd.ctex"
+uid="uid://m748b1viyllp"
+path="res://.godot/imported/Bat_Fly.png-abb9dc07610ece7a5ede5dfdce99c8c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://VampiroAssets/characters/Canines/Canine_Black_Run.png"
-dest_files=["res://.godot/imported/Canine_Black_Run.png-d3b5ce6ac19c3933b990d69b49aa46bd.ctex"]
+source_file="res://Textures/Enemy/Bat_Fly.png"
+dest_files=["res://.godot/imported/Bat_Fly.png-abb9dc07610ece7a5ede5dfdce99c8c9.ctex"]
 
 [params]
 

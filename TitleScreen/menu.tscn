@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://cbqlsfubwmyiy"]
+
+[ext_resource type="Script" uid="uid://c3fendaefklsv" path="res://TitleScreen/menu.gd" id="1_cxswi"]
+[ext_resource type="Texture2D" uid="uid://cen5bmos5amwt" path="res://VampiroAssets/HR_Dark Gothic Castle.png" id="1_dmcrl"]
+[ext_resource type="FontFile" uid="uid://ca00qd225l4hd" path="res://VampiroAssets/fonts/Gotfridus.otf" id="2_t4alp"]
+[ext_resource type="PackedScene" uid="uid://b76i4thcriaxl" path="res://Utility/basic_button.tscn" id="3_t4alp"]
+
+[node name="Menu" type="Control" unique_id=223050620]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cxswi")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1554676698]
+visible = false
+custom_minimum_size = Vector2(640, 380)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.59469706, 0.2731821, 0.2528543, 1)
+
+[node name="HrDarkGothicCastle" type="Sprite2D" parent="." unique_id=1973324975]
+position = Vector2(337, 187)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("1_dmcrl")
+
+[node name="Label" type="Label" parent="." unique_id=1803885200]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 1.0
+offset_right = 764.0
+offset_bottom = 101.0
+theme_override_fonts/font = ExtResource("2_t4alp")
+theme_override_font_sizes/font_size = 70
+text = "Vampiro"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="btn_play" parent="." unique_id=1261441914 instance=ExtResource("3_t4alp")]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 250.0
+offset_right = 360.0
+offset_bottom = 282.0
+text = "Play"
+
+[node name="btn_exit" parent="." unique_id=632686236 instance=ExtResource("3_t4alp")]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 290.0
+offset_right = 360.0
+offset_bottom = 322.0
+text = "Exit"
+
+[connection signal="click_end" from="btn_play" to="." method="_on_btn_play_click_end"]
+[connection signal="click_end" from="btn_exit" to="." method="_on_btn_exit_click_end"]

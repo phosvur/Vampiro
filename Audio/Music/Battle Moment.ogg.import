@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bbxvhk4fmba4o"
+path="res://.godot/imported/Battle Moment.ogg-67912f57978d79aff77f23511dfa0352.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Music/Battle Moment.ogg"
+dest_files=["res://.godot/imported/Battle Moment.ogg-67912f57978d79aff77f23511dfa0352.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

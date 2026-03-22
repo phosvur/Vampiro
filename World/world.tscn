@@ -4,13 +4,18 @@
 [ext_resource type="PackedScene" uid="uid://8ldeawdekyhn" path="res://Player/player.tscn" id="2_8a836"]
 [ext_resource type="PackedScene" uid="uid://bd328vods7y4u" path="res://Utility/enemy_spawner.tscn" id="3_j8job"]
 [ext_resource type="Script" uid="uid://cabh720n5vqol" path="res://Utility/spawn_info.gd" id="4_yf0ba"]
+[ext_resource type="PackedScene" uid="uid://dw3tpqm0i5dcy" path="res://Enemy/enemy_canine_strong.tscn" id="5_eidgh"]
 [ext_resource type="PackedScene" uid="uid://d31ktfp3jcxda" path="res://Enemy/enemy_skull_weak.tscn" id="6_eidgh"]
+[ext_resource type="PackedScene" uid="uid://cidwn76xquuqy" path="res://Enemy/enemy_kobold_weak.tscn" id="6_lo5ox"]
 [ext_resource type="PackedScene" uid="uid://blfpemdbjnpsk" path="res://Enemy/enemy_kobold_strong.tscn" id="6_oe8m4"]
+[ext_resource type="AudioStream" uid="uid://bbxvhk4fmba4o" path="res://Audio/Music/Battle Moment.ogg" id="7_eidgh"]
+[ext_resource type="Script" uid="uid://6coa88cp87ms" path="res://Audio/Music/snd_Music.gd" id="8_oe8m4"]
+[ext_resource type="PackedScene" uid="uid://b70551p644lnd" path="res://Enemy/enemy_bat_strong.tscn" id="9_h2aik"]
 
 [sub_resource type="Resource" id="Resource_k354k"]
 script = ExtResource("4_yf0ba")
 time_end = 30
-enemy = ExtResource("6_eidgh")
+enemy = ExtResource("5_eidgh")
 enemy_num = 2
 enemy_spawn_delay = 1
 metadata/_custom_type_script = "uid://cabh720n5vqol"
@@ -19,7 +24,7 @@ metadata/_custom_type_script = "uid://cabh720n5vqol"
 script = ExtResource("4_yf0ba")
 time_start = 30
 time_end = 210
-enemy = ExtResource("6_eidgh")
+enemy = ExtResource("6_lo5ox")
 enemy_num = 2
 metadata/_custom_type_script = "uid://cabh720n5vqol"
 
@@ -27,7 +32,7 @@ metadata/_custom_type_script = "uid://cabh720n5vqol"
 script = ExtResource("4_yf0ba")
 time_start = 60
 time_end = 180
-enemy = ExtResource("6_oe8m4")
+enemy = ExtResource("6_eidgh")
 enemy_num = 1
 enemy_spawn_delay = 1
 metadata/_custom_type_script = "uid://cabh720n5vqol"
@@ -45,8 +50,8 @@ metadata/_custom_type_script = "uid://cabh720n5vqol"
 script = ExtResource("4_yf0ba")
 time_start = 210
 time_end = 240
-enemy = ExtResource("6_oe8m4")
-enemy_num = 2
+enemy = ExtResource("5_eidgh")
+enemy_num = 3
 metadata/_custom_type_script = "uid://cabh720n5vqol"
 
 [sub_resource type="Resource" id="Resource_awrha"]
@@ -61,7 +66,7 @@ metadata/_custom_type_script = "uid://cabh720n5vqol"
 script = ExtResource("4_yf0ba")
 time_start = 240
 time_end = 240
-enemy = ExtResource("6_oe8m4")
+enemy = ExtResource("6_eidgh")
 enemy_num = 1
 metadata/_custom_type_script = "uid://cabh720n5vqol"
 
@@ -77,7 +82,7 @@ metadata/_custom_type_script = "uid://cabh720n5vqol"
 script = ExtResource("4_yf0ba")
 time_start = 300
 time_end = 300
-enemy = ExtResource("6_oe8m4")
+enemy = ExtResource("9_h2aik")
 enemy_num = 1
 metadata/_custom_type_script = "uid://cabh720n5vqol"
 
@@ -97,3 +102,12 @@ position = Vector2(102, 63)
 spawns = Array[ExtResource("4_yf0ba")]([SubResource("Resource_k354k"), SubResource("Resource_w47uh"), SubResource("Resource_lo5ox"), SubResource("Resource_h2aik"), SubResource("Resource_0wqet"), SubResource("Resource_awrha"), SubResource("Resource_f23eu"), SubResource("Resource_oeat8"), SubResource("Resource_5xkvv")])
 
 [node name="Loot" type="Node2D" parent="." unique_id=1872018630 groups=["loot"]]
+
+[node name="snd_Music" type="AudioStreamPlayer" parent="." unique_id=1353989756]
+process_mode = 3
+stream = ExtResource("7_eidgh")
+volume_db = -15.0
+autoplay = true
+script = ExtResource("8_oe8m4")
+
+[connection signal="playerdeath" from="Player" to="snd_Music" method="_on_player_playerdeath"]

@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Vampiro"
-run/main_scene="uid://hccy823mi411"
+run/main_scene="uid://cbqlsfubwmyiy"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 

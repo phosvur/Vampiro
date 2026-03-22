@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djtbii2a3rgwo"
-path="res://.godot/imported/CoffinOpen.png-bd8566cf2db9a232b0aeb6ad29e79caf.ctex"
+uid="uid://cmd0cojixcdiq"
+path="res://.godot/imported/Canine_Black_Run.png-190d7811787e26d838b6504b17f96f4e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://VampiroAssets/CoffinOpen.png"
-dest_files=["res://.godot/imported/CoffinOpen.png-bd8566cf2db9a232b0aeb6ad29e79caf.ctex"]
+source_file="res://Textures/Enemy/Canine_Black_Run.png"
+dest_files=["res://.godot/imported/Canine_Black_Run.png-190d7811787e26d838b6504b17f96f4e.ctex"]
 
 [params]
 

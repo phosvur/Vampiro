@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0to0mf7xw8e5"
-path="res://.godot/imported/Bat_Fly.png-4fba1f355696e897aa81d3eaf9e434bc.ctex"
+uid="uid://dofeyx274r8kt"
+path="res://.godot/imported/newBones_SingleSkull_Fly.png-7f058a9faf3bf338c36edec0a2b34708.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://VampiroAssets/characters/Bat/Bat_Fly.png"
-dest_files=["res://.godot/imported/Bat_Fly.png-4fba1f355696e897aa81d3eaf9e434bc.ctex"]
+source_file="res://Textures/Enemy/newBones_SingleSkull_Fly.png"
+dest_files=["res://.godot/imported/newBones_SingleSkull_Fly.png-7f058a9faf3bf338c36edec0a2b34708.ctex"]
 
 [params]
 
