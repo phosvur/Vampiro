@@ -2,19 +2,30 @@ extends CharacterBody2D
 
 var movement_speed = 40.0
 var hp = 80
+var last_movement = Vector2.UP
 
 # Attacks
 var iceSpear = preload("res://Player/Attack/ice_spear.tscn")
+var tornado = preload("res://Player/Attack/tornado.tscn")
 
 # AttackNodes
 @onready var iceSpearTimer = get_node("%IceSpearTimer")
-@onready var IceSpearAttackTimer = get_node("%IceSpearAttackTimer")
+@onready var iceSpearAttackTimer = get_node("%IceSpearAttackTimer")
+@onready var tornadoTimer = get_node("%TornadoTimer")
+@onready var tornadoAttackTimer = get_node("%TornadoAttackTimer")
+
 
 # IceSpear
 var icespear_ammo = 0
 var icespear_baseammo = 1
 var icespear_attackspeed = 1.5
 var icespear_level = 1
+
+# Tornado
+var tornado_ammo = 0
+var tornado_baseammo = 5
+var tornado_attackspeed = 3
+var tornado_level = 1
 
 # Enemy Related
 var enemy_close = []
@@ -28,12 +39,6 @@ func _ready():
 func _physics_process(_delta):
 	movement()
 	
-func attack():
-	if icespear_level > 0:
-		iceSpearTimer.wait_time = icespear_attackspeed
-		if iceSpearTimer.is_stopped():
-			iceSpearTimer.start()
-	
 func movement():
 	var x_mov = Input.get_action_strength("right") -  Input.get_action_strength("left")
 	var y_mov = Input.get_action_strength("down") - Input.get_action_strength("up")
@@ -44,6 +49,7 @@ func movement():
 		sprite.flip_h = false
 		
 	if mov != Vector2.ZERO:
+		last_movement = mov
 		if walkTimer.is_stopped():
 			if sprite.frame >= sprite.hframes - 1:	
 				sprite.frame = 0
@@ -53,8 +59,17 @@ func movement():
 
 	velocity = mov.normalized()*movement_speed
 	move_and_slide()
-
-
+	
+func attack():
+	if icespear_level > 0:
+		iceSpearTimer.wait_time = icespear_attackspeed
+		if iceSpearTimer.is_stopped():
+			iceSpearTimer.start()
+	if tornado_level > 0:
+		tornadoTimer.wait_time = tornado_attackspeed
+		if tornadoTimer.is_stopped():
+			tornadoTimer.start()
+	
 func _on_hurt_box_hurt(damage, _angle, _knockback):
 	hp -= damage
 	print(hp)
@@ -62,14 +77,10 @@ func _on_hurt_box_hurt(damage, _angle, _knockback):
 	if hp <= 0:
 		game_over()
 
-func game_over():
-	print("Game Over!")
-	get_tree().paused = true
-
 
 func _on_ice_spear_timer_timeout():
 	icespear_ammo += icespear_baseammo
-	IceSpearAttackTimer.start()
+	iceSpearAttackTimer.start()
 
 
 func _on_ice_spear_attack_timer_timeout():
@@ -81,9 +92,27 @@ func _on_ice_spear_attack_timer_timeout():
 		add_child(icespear_attack)
 		icespear_ammo -= 1
 		if icespear_ammo > 0:
-			IceSpearAttackTimer.start()
+			iceSpearAttackTimer.start()
 		else:
-			IceSpearAttackTimer.stop()
+			iceSpearAttackTimer.stop()
+			
+func _on_tornado_timer_timeout():
+	tornado_ammo += tornado_baseammo
+	tornadoAttackTimer.start()
+
+
+func _on_tornado_attack_timer_timeout():
+	if tornado_ammo > 0:
+		var tornado_attack = tornado.instantiate()
+		tornado_attack.position = position
+		tornado_attack.last_movement = last_movement
+		tornado_attack.level = tornado_level
+		add_child(tornado_attack)
+		tornado_ammo -= 1
+		if tornado_ammo > 0:
+			tornadoAttackTimer.start()
+		else:
+			tornadoAttackTimer.stop()
 		
 func get_random_target():
 	if enemy_close.size() > 0:
@@ -100,3 +129,7 @@ func _on_enemy_detection_area_body_entered(body):
 func _on_enemy_detection_area_body_exited(body):
 	if enemy_close.has(body):
 		enemy_close.erase(body)
+
+func game_over():
+	print("Game Over!")
+	get_tree().paused = true
