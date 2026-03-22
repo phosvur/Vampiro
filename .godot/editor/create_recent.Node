@@ -1,7 +1,8 @@
+GridContainer
+TextureRect
 Label
 TextureProgressBar
 Node
-TextureRect
 ColorRect
 AudioStreamPlayer
 VBoxContainer
