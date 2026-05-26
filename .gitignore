@@ -1,31 +1,61 @@
-# Godot project files
+# # Godot project files
+# .import/
+# .export/
+# *.godot
+# *.mono/
+#
+# # OS junk
+# .DS_Store
+# Thumbs.db
+#
+# # Logs & temp
+# *.log
+# *.tmp
+#
+# # Assets
+# VampiroAssets/
+#
+# # Builds / exports (IMPORTANT)
+# *.exe
+# *.x86_64
+# *.zip
+# *.pck
+# *.sh
+#
+# # Export folders (common naming)
+# build/
+# builds/
+# exports/
+#
+# # Godot export presets (optional to ignore)
+# export_presets.cfg
+
+# Godot-specific ignores (CORRECTED)
 .import/
-.export/
-*.godot
-*.mono/
+.mono/
+data_*/
+.tmp/
 
-# OS junk
-.DS_Store
-Thumbs.db
-
-# Logs & temp
-*.log
-*.tmp
-
-# Assets
-VampiroAssets/
-
-# Builds / exports (IMPORTANT)
+# Exported builds and artifacts
+/export/
+/build/
 *.exe
 *.x86_64
 *.zip
 *.pck
 *.sh
 
-# Export folders (common naming)
-build/
-builds/
-exports/
+# Logs & temp files
+*.log
+*.tmp
 
-# Godot export presets (optional to ignore)
-export_presets.cfg
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Optional: ignore export_presets.cfg only if it contains secrets (e.g. signing keys)
+# Otherwise, include it to share export settings across the team
+# export_presets.cfg
+
+# Assets folder (ONLY if it's a placeholder or generated)
+# VampiroAssets/  ← Remove this line if these are source assets your team needs   
