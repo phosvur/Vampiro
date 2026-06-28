@@ -397,19 +397,19 @@ func _on_btn_menu_click_end() -> void:
 func trigger_time_slow() -> void:
 	is_timeslow_active = true
 	
-	# Slow down the global game world
-	Engine.time_scale = timeslow_factor
+	# ONLY modify our global variable. DO NOT touch Engine.time_scale!
+	GlobalTime.enemy_time_scale = timeslow_factor
 	
-	# CRITICAL: We pass 'true' as the process_always argument to ignore time_scale
-	# This ensures the duration lasts exactly 1.5 real-world seconds
-	await get_tree().create_timer(timeslow_duration, true, false, true).timeout
+	# Wait for the normal-speed duration
+	await get_tree().create_timer(timeslow_duration).timeout
 	
-	# Restore normal game world speed
-	Engine.time_scale = 1.0
+	# Restore normal speed to the variable
+	GlobalTime.enemy_time_scale = 1.0
+	
 	is_timeslow_active = false
 	is_timeslow_cooldown = true
 	
-	# Cooldown timer running in real-world seconds
-	await get_tree().create_timer(timeslow_cooldown, true, false, true).timeout
+	# Cooldown timer
+	await get_tree().create_timer(timeslow_cooldown).timeout
 	is_timeslow_cooldown = false
-	print("Time Slow Ability is charged and ready!")
+	print("Time Slow Ready!")

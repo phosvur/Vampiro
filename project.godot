@@ -22,6 +22,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 UpgradeDb="*uid://ce5ela3ylqwlm"
+GlobalTime="*uid://hvs2w286mtm2"
 
 [display]
 

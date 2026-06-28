@@ -25,16 +25,26 @@ func _ready():
 	hitBox.damage = enemy_damage
 
 func _physics_process(_delta):
-	knockback = knockback.move_toward(Vector2.ZERO, knockback_recovery)
+	# 1. Slow down knockback recovery when time is distorted
+	var current_knockback_recovery = knockback_recovery * GlobalTime.enemy_time_scale
+	knockback = knockback.move_toward(Vector2.ZERO, current_knockback_recovery)
+	
+	# 2. Track the player's direction
 	var direction = global_position.direction_to(player.global_position)
-	velocity = direction * movement_speed
+	
+	# 3. Apply GlobalTime to movement speed
+	var current_speed = movement_speed * GlobalTime.enemy_time_scale
+	velocity = direction * current_speed
 	velocity += knockback
 	move_and_slide()
+
+	# 4. Dynamically slow down or speed up the animation frame rate
+	anim.speed_scale = GlobalTime.enemy_time_scale
 
 	if direction.x > 0.1:
 		sprite.flip_h = true
 	elif direction.x < -0.1:
-		sprite.flip_h = false 
+		sprite.flip_h = false
 		
 func death():
 	emit_signal("remove_from_array",self)
