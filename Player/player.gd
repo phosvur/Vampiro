@@ -10,6 +10,14 @@ var experience = 0
 var experience_level = 1
 var collected_experience = 0
 
+# Time Slow Ability Attributes
+var timeslow_level = 0
+var timeslow_cooldown = 6.0       # Cooldown in real-world seconds
+var timeslow_duration = 1.5       # Duration of slow motion
+var timeslow_factor = 0.3         # 30% of normal engine speed
+var is_timeslow_active = false
+var is_timeslow_cooldown = false
+
 # Attacks
 var iceSpear = preload("res://Player/Attack/ice_spear.tscn")
 var tornado = preload("res://Player/Attack/tornado.tscn")
@@ -70,13 +78,21 @@ var enemy_close = []
 signal playerdeath
 
 func _ready():
+	timeslow_level = 1 #temp
 	upgrade_character("icespear1")
 	attack()
 	set_expbar(experience, calculate_experiencecap())
 	_on_hurt_box_hurt(0,0,0)
+	
+
 
 func _physics_process(_delta):
 	movement()
+	
+	# Only allow the ability if the player has unlocked it via levelup/upgrade
+	if timeslow_level > 0 and Input.is_action_just_pressed("time_slow"):
+		if not is_timeslow_active and not is_timeslow_cooldown:
+			trigger_time_slow()
 	
 func movement():
 	var x_mov = Input.get_action_strength("right") -  Input.get_action_strength("left")
@@ -289,6 +305,14 @@ func upgrade_character(upgrade):
 		"food":
 			hp += 20
 			hp = clamp(hp,0,maxhp)
+		"timeslow1":
+			timeslow_level = 1
+		"timeslow2":
+			timeslow_level = 2
+			timeslow_duration = 2.0  # Upgrade the duration slightly
+		"timeslow3":
+			timeslow_level = 3
+			timeslow_cooldown = 4.5  # Lower the cooldown
 	adjust_gui_collection(upgrade)
 	attack()
 	var option_children = upgradeOptions.get_children()
@@ -369,3 +393,23 @@ func adjust_gui_collection(upgrade):
 func _on_btn_menu_click_end() -> void:
 	get_tree().paused = false
 	var _level = get_tree().change_scene_to_file("res://TitleScreen/menu.tscn")
+	
+func trigger_time_slow() -> void:
+	is_timeslow_active = true
+	
+	# Slow down the global game world
+	Engine.time_scale = timeslow_factor
+	
+	# CRITICAL: We pass 'true' as the process_always argument to ignore time_scale
+	# This ensures the duration lasts exactly 1.5 real-world seconds
+	await get_tree().create_timer(timeslow_duration, true, false, true).timeout
+	
+	# Restore normal game world speed
+	Engine.time_scale = 1.0
+	is_timeslow_active = false
+	is_timeslow_cooldown = true
+	
+	# Cooldown timer running in real-world seconds
+	await get_tree().create_timer(timeslow_cooldown, true, false, true).timeout
+	is_timeslow_cooldown = false
+	print("Time Slow Ability is charged and ready!")
