@@ -68,6 +68,8 @@ var enemy_close = []
 @onready var collectedWeapons = get_node("%CollecteWeapons")
 @onready var collectedUpgrades = get_node("%CollectedUpgrades")
 @onready var itemContainer = preload("res://Player/GUI/item_container.tscn")
+@onready var time_tint = get_node("../TimeSlowTint")
+@onready var lblCooldown = get_node("%lblTimeSlowCooldown")
 
 @onready var deathPanel = get_node("%DeathPanel")
 @onready var lblResult = get_node("%lbl_Result")
@@ -394,22 +396,55 @@ func _on_btn_menu_click_end() -> void:
 	get_tree().paused = false
 	var _level = get_tree().change_scene_to_file("res://TitleScreen/menu.tscn")
 	
+#func trigger_time_slow() -> void:
+	#is_timeslow_active = true
+	#
+	## Turn on the cool time-slow visual tint
+	#time_tint.color = Color("4a75a0") 
+	#
+	#GlobalTime.enemy_time_scale = timeslow_factor
+	#await get_tree().create_timer(timeslow_duration).timeout
+	#GlobalTime.enemy_time_scale = 1.0
+	#
+	## Restore normal, clear lighting
+	#time_tint.color = Color.WHITE 
+	#
+	#is_timeslow_active = false
+	#is_timeslow_cooldown = true
+	#
+	#await get_tree().create_timer(timeslow_cooldown).timeout
+	#is_timeslow_cooldown = false
+	#print("Time Slow Ready!")
+
 func trigger_time_slow() -> void:
 	is_timeslow_active = true
-	
-	# ONLY modify our global variable. DO NOT touch Engine.time_scale!
+	time_tint.color = Color("4a75a0") 
 	GlobalTime.enemy_time_scale = timeslow_factor
 	
-	# Wait for the normal-speed duration
-	await get_tree().create_timer(timeslow_duration).timeout
+	# Update UI to show the ability is active
+	lblCooldown.text = "ACTIVE"
+	lblCooldown.modulate = Color.CYAN
 	
-	# Restore normal speed to the variable
+	await get_tree().create_timer(timeslow_duration).timeout
 	GlobalTime.enemy_time_scale = 1.0
+	time_tint.color = Color.WHITE 
 	
 	is_timeslow_active = false
 	is_timeslow_cooldown = true
 	
-	# Cooldown timer
-	await get_tree().create_timer(timeslow_cooldown).timeout
+	# Dynamic Cooldown Countdown Loop
+	var time_left = timeslow_cooldown
+	lblCooldown.modulate = Color.RED
+	while time_left > 0:
+		lblCooldown.text = str("COOLDOWN: ", snapping_round(time_left), "s")
+		await get_tree().create_timer(0.1).timeout
+		time_left -= 0.1
+	
 	is_timeslow_cooldown = false
-	print("Time Slow Ready!")
+	lblCooldown.text = "READY"
+	lblCooldown.modulate = Color.GREEN
+
+# Helper to keep the float numbers looking clean on screen
+func snapping_round(num: float) -> String:
+	return "%.1f" % num
+	

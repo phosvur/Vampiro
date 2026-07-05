@@ -1,5 +1,6 @@
-AudioStreamPlayer
 Label
+CanvasModulate
+AudioStreamPlayer
 ColorRect
 Button
 GridContainer
@@ -11,4 +12,3 @@ Panel
 Control
 CanvasLayer
 CollisionShape2D
-Area2D

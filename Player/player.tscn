@@ -12,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://lejyn22twg4l" path="res://Audio/SoundEffect/Victory.wav" id="10_5htga"]
 [ext_resource type="AudioStream" uid="uid://w343b4x5tvtw" path="res://Audio/SoundEffect/Lose.ogg" id="11_p5o4e"]
 [ext_resource type="PackedScene" uid="uid://b76i4thcriaxl" path="res://Utility/basic_button.tscn" id="12_gu6f8"]
+[ext_resource type="FontFile" uid="uid://qslq6r3423uk" path="res://VampiroAssets/fonts/Gotfridus.ttf" id="13_p5o4e"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4ntmi"]
 radius = 5.0
@@ -219,6 +220,18 @@ theme_override_fonts/font = ExtResource("6_od3ui")
 text = "00:00"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="lblTimeSlowCooldown" type="Label" parent="GUILayer/GUI" unique_id=735875804]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 525.0
+offset_top = 23.0
+offset_right = 638.0
+offset_bottom = 60.0
+theme_override_fonts/font = ExtResource("13_p5o4e")
+theme_override_font_sizes/font_size = 11
+text = "READY"
+horizontal_alignment = 1
 
 [node name="CollecteWeapons" type="GridContainer" parent="GUILayer/GUI" unique_id=896220273]
 unique_name_in_owner = true

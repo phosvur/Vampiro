@@ -1,5 +1,5 @@
 9cad1ddce9e5a63143ba340c9520626b
-::res://::1782666165
+::res://::1783267701
 CoffinOpen.ico::OtherFile::-1::1774207381::0::1::::<><><>0<>0<><>::
 CoffinOpen.png::CompressedTexture2D::407463136262358206::1774199992::1774208035::1::::<><><>0<>0<>a16755f2add900f2db3a8eb441cce5ef<>res://.godot/imported/CoffinOpen.png-fbcbaa6b5b63130ae3a43451c86f04fb.ctex::
 export_presets.cfg::TextFile::-1::1774214000::0::1::::<><><>0<>0<><>::
@@ -21,8 +21,8 @@ Lose.ogg::AudioStreamOggVorbis::1603768030578505480::1774199992::1774199992::1::
 tornado.ogg::AudioStreamOggVorbis::4595565386450734093::1774199992::1774199992::1::::<><><>0<>0<>967a3a06648de7ee049f95c4f8b5983c<>res://.godot/imported/tornado.ogg-905b83d8ef1ce0aac3ced9ac6eac1455.oggvorbisstr::
 Victory.wav::AudioStreamWAV::780924828789501565::1774199992::1774199992::1::::<><><>0<>0<>70d60e0a556dfb33932fb163b4562f7a<>res://.godot/imported/Victory.wav-bd3be9d6414a4a02503c4b72ad5dc7da.sample::
 woosh.wav::AudioStreamWAV::6932302943556848040::1774199992::1774199992::1::::<><><>0<>0<>14895d3b2734efd05de7248fc6f8d57e<>res://.godot/imported/woosh.wav-ab061df73379afad44a9e04e929634d6.sample::
-::res://Enemy/::1774213173
-enemy.gd::GDScript::3244044462117581202::1774199992::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://Enemy/::1782668147
+enemy.gd::GDScript::3244044462117581202::1782668147::0::1::::<>CharacterBody2D<><>0<>0<><>::
 enemy_bat_strong.tscn::PackedScene::4685949597789347393::1774213171::0::1::::<><><>0<>0<><>::uid://bmho65yeqymis::::res://Enemy/enemy.gd<>uid://m748b1viyllp::::res://Textures/Enemy/Bat_Fly.png<>uid://bq7tg6cfj6qbb::::res://Utility/hurt_box.tscn<>uid://bacrfrx83p3dv::::res://Utility/hit_box.tscn<>uid://cgiw2d66vtt6e::::res://Audio/SoundEffect/enemy_hit.ogg
 enemy_canine_strong.tscn::PackedScene::8762400458059839864::1774213150::0::1::::<><><>0<>0<><>::uid://bmho65yeqymis::::res://Enemy/enemy.gd<>uid://cmd0cojixcdiq::::res://Textures/Enemy/Canine_Black_Run.png<>uid://bq7tg6cfj6qbb::::res://Utility/hurt_box.tscn<>uid://bacrfrx83p3dv::::res://Utility/hit_box.tscn<>uid://cgiw2d66vtt6e::::res://Audio/SoundEffect/enemy_hit.ogg
 enemy_kobold_strong.tscn::PackedScene::3169738385521479042::1774210853::0::1::::<><><>0<>0<><>::uid://bmho65yeqymis::::res://Enemy/enemy.gd<>uid://b4gvyakkncrup::::res://Textures/Enemy/kolbold_strong.png<>uid://bq7tg6cfj6qbb::::res://Utility/hurt_box.tscn<>uid://bacrfrx83p3dv::::res://Utility/hit_box.tscn<>uid://cgiw2d66vtt6e::::res://Audio/SoundEffect/enemy_hit.ogg
@@ -34,9 +34,9 @@ explosion.tscn::PackedScene::6933437063830165436::1774199992::0::1::::<><><>0<>0
 ::res://Objects/::1774199992
 experience_gem.gd::GDScript::8480687985506748631::1774199992::0::1::::<>Area2D<><>0<>0<><>::
 experience_gem.tscn::PackedScene::4349830577648892212::1774199992::0::1::::<><><>0<>0<><>::uid://rj4prxjqm3qv::::res://Textures/Items/Gems/Gem_green.png<>uid://ds3dxsbn1omm6::::res://Objects/experience_gem.gd<>uid://ll7w5usff4jv::::res://Audio/SoundEffect/collectgem.mp3
-::res://Player/::1774212530
-player.gd::GDScript::5333763328079532689::1774206442::0::1::::<>CharacterBody2D<><>0<>0<><>::
-player.tscn::PackedScene::2339129323631414987::1774212530::0::1::::<><><>0<>0<><>::uid://ch8ykj76s6uy0::::res://Player/player.gd<>uid://cpo3jiaenmbh::::res://Textures/Player/Wight_Knight_Pixel_art_Movement_walk_forward.png<>uid://bq7tg6cfj6qbb::::res://Utility/hurt_box.tscn<>uid://bf70y2as2kml5::::res://Textures/GUI/healthbar.png<>uid://0li2iq8yc481::::res://Textures/GUI/exp_background.png<>uid://blwvpqsi8fn6g::::res://Textures/GUI/exp_progress.png<>uid://45fs0qt0rvbb::::res://Textures/GUI/health.png<>uid://ca00qd225l4hd::::res://VampiroAssets/fonts/Gotfridus.otf<>uid://bq6enb7a6ij36::::res://Audio/SoundEffect/levelup.ogg<>uid://lejyn22twg4l::::res://Audio/SoundEffect/Victory.wav<>uid://w343b4x5tvtw::::res://Audio/SoundEffect/Lose.ogg<>uid://b76i4thcriaxl::::res://Utility/basic_button.tscn
+::res://Player/::1783267310
+player.gd::GDScript::5333763328079532689::1783267310::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player.tscn::PackedScene::2339129323631414987::1783267310::0::1::::<><><>0<>0<><>::uid://ch8ykj76s6uy0::::res://Player/player.gd<>uid://cpo3jiaenmbh::::res://Textures/Player/Wight_Knight_Pixel_art_Movement_walk_forward.png<>uid://bq7tg6cfj6qbb::::res://Utility/hurt_box.tscn<>uid://bf70y2as2kml5::::res://Textures/GUI/healthbar.png<>uid://0li2iq8yc481::::res://Textures/GUI/exp_background.png<>uid://blwvpqsi8fn6g::::res://Textures/GUI/exp_progress.png<>uid://45fs0qt0rvbb::::res://Textures/GUI/health.png<>uid://ca00qd225l4hd::::res://VampiroAssets/fonts/Gotfridus.otf<>uid://bq6enb7a6ij36::::res://Audio/SoundEffect/levelup.ogg<>uid://lejyn22twg4l::::res://Audio/SoundEffect/Victory.wav<>uid://w343b4x5tvtw::::res://Audio/SoundEffect/Lose.ogg<>uid://b76i4thcriaxl::::res://Utility/basic_button.tscn
 ::res://Player/Attack/::1774199992
 ice_spear.gd::GDScript::9142543266784622114::1774199992::0::1::::<>Area2D<><>0<>0<><>::
 ice_spear.tscn::PackedScene::3364830321361599271::1774199992::0::1::::<><><>0<>0<><>::uid://d3iyl70tnp5jq::::res://Player/Attack/ice_spear.gd<>uid://jjy043vpgln5::::res://Textures/Items/Weapons/ice_spear.png<>uid://byjcuax3tfl3j::::res://Audio/SoundEffect/ice.wav
@@ -85,11 +85,12 @@ Wight_Knight_Pixel_art_Movement_walk_forward.png::CompressedTexture2D::172243878
 ::res://TitleScreen/::1774209976
 menu.gd::GDScript::6748717119072117445::1774204402::0::1::::<>Control<><>0<>0<><>::
 menu.tscn::PackedScene::4876760579888083688::1774209976::0::1::::<><><>0<>0<><>::uid://c3fendaefklsv::::res://TitleScreen/menu.gd<>uid://cen5bmos5amwt::::res://VampiroAssets/HR_Dark Gothic Castle.png<>uid://ca00qd225l4hd::::res://VampiroAssets/fonts/Gotfridus.otf<>uid://b76i4thcriaxl::::res://Utility/basic_button.tscn
-::res://Utility/::1774213090
+::res://Utility/::1782667987
 basic_button.gd::GDScript::5778626049902604306::1774199992::0::1::::<>Button<><>0<>0<><>::
 basic_button.tscn::PackedScene::4696997923322551529::1774199992::0::1::::<><><>0<>0<><>::uid://btkwou4i5k8fk::::res://Audio/GUI/hover.wav<>uid://colheksy0l46y::::res://Utility/basic_button.gd<>uid://ca00qd225l4hd::::res://VampiroAssets/fonts/Gotfridus.otf<>uid://c8vdf25eqmml::::res://Audio/GUI/click.wav
 enemy_spawner.gd::GDScript::7387621131429433237::1774199992::0::1::::<>Node2D<><>0<>0<><>::
 enemy_spawner.tscn::PackedScene::2656489206503689678::1774199992::0::1::::<><><>0<>0<><>::uid://ddivbnbjdg4r6::::res://Utility/enemy_spawner.gd<>uid://cabh720n5vqol::::res://Utility/spawn_info.gd<>uid://cidwn76xquuqy::::res://Enemy/enemy_kobold_weak.tscn
+GlobalTime.gd::GDScript::535816159371422383::1782667987::0::1::::<>Node<><>0<>0<><>::
 hit_box.gd::GDScript::8223929453278153875::1774199992::0::1::::<>Area2D<><>0<>0<><>::
 hit_box.tscn::PackedScene::2391591487012637443::1774199992::0::1::::<><><>0<>0<><>::uid://dpfy6fsv7mjhb::::res://Utility/hit_box.gd
 hurt_box.gd::GDScript::9108298524559991637::1774199992::0::1::::<>Area2D<><>0<>0<><>::
@@ -107,5 +108,5 @@ Gotfridus.ttf::FontFile::1160878413202072970::1774199992::1774199992::1::::<><><
 Gotfridus.woff::FontFile::6565012554009425450::1774199992::1774199992::1::::<><><>0<>0<>fb911f69d1a6624a9c217063bac27223<>res://.godot/imported/Gotfridus.woff-6f1f78b663f4c3ebc978a0ce5c709471.fontdata::
 Gotfridus.woff2::FontFile::483363765615430521::1774199992::1774199992::1::::<><><>0<>0<>b6e529a9abdf2c26e56f025a8b3c6fce<>res://.godot/imported/Gotfridus.woff2-4f201d1921305f7ea62e6a5216c2bb7d.fontdata::
 License.txt::TextFile::-1::1774199992::0::1::::<><><>0<>0<><>::
-::res://World/::1774213266
-world.tscn::PackedScene::495616730282447426::1774213266::0::1::::<><><>0<>0<><>::uid://fadb38jhmurk::::res://Textures/dirt_full_new.png<>uid://8ldeawdekyhn::::res://Player/player.tscn<>uid://bd328vods7y4u::::res://Utility/enemy_spawner.tscn<>uid://cabh720n5vqol::::res://Utility/spawn_info.gd<>uid://dw3tpqm0i5dcy::::res://Enemy/enemy_canine_strong.tscn<>uid://d31ktfp3jcxda::::res://Enemy/enemy_skull_weak.tscn<>uid://cidwn76xquuqy::::res://Enemy/enemy_kobold_weak.tscn<>uid://blfpemdbjnpsk::::res://Enemy/enemy_kobold_strong.tscn<>uid://bbxvhk4fmba4o::::res://Audio/Music/Battle Moment.ogg<>uid://6coa88cp87ms::::res://Audio/Music/snd_Music.gd<>uid://b70551p644lnd::::res://Enemy/enemy_bat_strong.tscn
+::res://World/::1783267317
+world.tscn::PackedScene::495616730282447426::1783267317::0::1::::<><><>0<>0<><>::uid://fadb38jhmurk::::res://Textures/dirt_full_new.png<>uid://8ldeawdekyhn::::res://Player/player.tscn<>uid://bd328vods7y4u::::res://Utility/enemy_spawner.tscn<>uid://cabh720n5vqol::::res://Utility/spawn_info.gd<>uid://dw3tpqm0i5dcy::::res://Enemy/enemy_canine_strong.tscn<>uid://d31ktfp3jcxda::::res://Enemy/enemy_skull_weak.tscn<>uid://cidwn76xquuqy::::res://Enemy/enemy_kobold_weak.tscn<>uid://blfpemdbjnpsk::::res://Enemy/enemy_kobold_strong.tscn<>uid://bbxvhk4fmba4o::::res://Audio/Music/Battle Moment.ogg<>uid://6coa88cp87ms::::res://Audio/Music/snd_Music.gd<>uid://b70551p644lnd::::res://Enemy/enemy_bat_strong.tscn

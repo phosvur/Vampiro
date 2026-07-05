@@ -110,4 +110,6 @@ volume_db = -15.0
 autoplay = true
 script = ExtResource("8_oe8m4")
 
+[node name="TimeSlowTint" type="CanvasModulate" parent="." unique_id=1047269306]
+
 [connection signal="playerdeath" from="Player" to="snd_Music" method="_on_player_playerdeath"]
