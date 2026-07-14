@@ -84,7 +84,7 @@ func _ready():
 	upgrade_character("icespear1")
 	attack()
 	set_expbar(experience, calculate_experiencecap())
-	_on_hurt_box_hurt(0,0,0)
+	update_health_bar()
 	
 
 
@@ -131,11 +131,16 @@ func attack():
 	
 func _on_hurt_box_hurt(damage, _angle, _knockback):
 	hp -= clamp(damage-armor, 1.0, 999.0)
-	healthBar.max_value = maxhp
-	healthBar.value = hp
-	
+	update_health_bar()
+
 	if hp <= 0:
 		death()
+
+func update_health_bar():
+	healthBar.max_value = maxhp
+	healthBar.value = hp
+	var ratio = clamp(hp / float(maxhp), 0.0, 1.0)
+	healthBar.tint_progress = Color.from_hsv(ratio * 0.333, 1.0, 1.0)
 
 
 func _on_ice_spear_timer_timeout():
@@ -307,6 +312,7 @@ func upgrade_character(upgrade):
 		"food":
 			hp += 20
 			hp = clamp(hp,0,maxhp)
+			update_health_bar()
 		"timeslow1":
 			timeslow_level = 1
 		"timeslow2":
