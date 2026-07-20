@@ -1,0 +1,231 @@
+{
+  "group_id": "ed15fd74-af5c-486f-8388-f59c09ce3326",
+  "states": [
+    {
+      "character": {
+        "id": "a2969195-ee62-4657-bdca-199cc1f10e85",
+        "name": "Dark fantasy witch girl wearing",
+        "prompt": "Dark fantasy witch girl wearing a large ornate black witch hat and holding a wand. She has a gothic layered dress with white inner fabric, black outer layers, long sleeves, and elegant magical details.",
+        "size": {
+          "width": 92,
+          "height": 92
+        },
+        "template_id": "mannequin",
+        "directions": 8,
+        "view": "high top-down",
+        "created_at": "2026-07-13T18:19:15.817837+00:00"
+      },
+      "folder": "Dark_fantasy_witch_girl_wearing",
+      "frames": {
+        "rotations": {
+          "south": "Dark_fantasy_witch_girl_wearing/rotations/south.png",
+          "south-east": "Dark_fantasy_witch_girl_wearing/rotations/south-east.png",
+          "east": "Dark_fantasy_witch_girl_wearing/rotations/east.png",
+          "north-east": "Dark_fantasy_witch_girl_wearing/rotations/north-east.png",
+          "north": "Dark_fantasy_witch_girl_wearing/rotations/north.png",
+          "north-west": "Dark_fantasy_witch_girl_wearing/rotations/north-west.png",
+          "west": "Dark_fantasy_witch_girl_wearing/rotations/west.png",
+          "south-west": "Dark_fantasy_witch_girl_wearing/rotations/south-west.png"
+        },
+        "animations": {
+          "The_witch_stands_in_place_her_body_gently_rising_a": {
+            "west": [
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/west/frame_000.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/west/frame_001.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/west/frame_002.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/west/frame_003.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/west/frame_004.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/west/frame_005.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/west/frame_006.png"
+            ],
+            "north-west": [
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/north-west/frame_000.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/north-west/frame_001.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/north-west/frame_002.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/north-west/frame_003.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/north-west/frame_004.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/north-west/frame_005.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/north-west/frame_006.png"
+            ],
+            "south": [
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/south/frame_000.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/south/frame_001.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/south/frame_002.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/south/frame_003.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/south/frame_004.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/south/frame_005.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/south/frame_006.png"
+            ],
+            "north": [
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/north/frame_000.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/north/frame_001.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/north/frame_002.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/north/frame_003.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/north/frame_004.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/north/frame_005.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/north/frame_006.png"
+            ],
+            "east": [
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/east/frame_000.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/east/frame_001.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/east/frame_002.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/east/frame_003.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/east/frame_004.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/east/frame_005.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/east/frame_006.png"
+            ],
+            "south-west": [
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/south-west/frame_000.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/south-west/frame_001.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/south-west/frame_002.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/south-west/frame_003.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/south-west/frame_004.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/south-west/frame_005.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/south-west/frame_006.png"
+            ],
+            "south-east": [
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/south-east/frame_000.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/south-east/frame_001.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/south-east/frame_002.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/south-east/frame_003.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/south-east/frame_004.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/south-east/frame_005.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/south-east/frame_006.png"
+            ],
+            "north-east": [
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/north-east/frame_000.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/north-east/frame_001.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/north-east/frame_002.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/north-east/frame_003.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/north-east/frame_004.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/north-east/frame_005.png",
+              "Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/north-east/frame_006.png"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "character": {
+        "id": "d7b35801-576e-4601-b266-2381b15ff097",
+        "name": "mid-walk",
+        "prompt": "Dark fantasy witch girl wearing a large ornate black witch hat and holding a wand. She has a gothic layered dress with white inner fabric, black outer layers, long sleeves, and elegant magical details.",
+        "size": {
+          "width": 92,
+          "height": 92
+        },
+        "template_id": "mannequin",
+        "directions": 8,
+        "view": "high top-down",
+        "created_at": "2026-07-13T18:42:17.952557+00:00"
+      },
+      "folder": "mid-walk",
+      "frames": {
+        "rotations": {
+          "south": "mid-walk/rotations/south.png",
+          "south-east": "mid-walk/rotations/south-east.png",
+          "east": "mid-walk/rotations/east.png",
+          "north-east": "mid-walk/rotations/north-east.png",
+          "north": "mid-walk/rotations/north.png",
+          "north-west": "mid-walk/rotations/north-west.png",
+          "west": "mid-walk/rotations/west.png",
+          "south-west": "mid-walk/rotations/south-west.png"
+        },
+        "animations": {
+          "The_witch_walks_forward_with_a_steady_rhythmic_gai": {
+            "south-west": [
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/south-west/frame_000.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/south-west/frame_001.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/south-west/frame_002.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/south-west/frame_003.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/south-west/frame_004.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/south-west/frame_005.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/south-west/frame_006.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/south-west/frame_007.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/south-west/frame_008.png"
+            ],
+            "south-east": [
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/south-east/frame_000.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/south-east/frame_001.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/south-east/frame_002.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/south-east/frame_003.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/south-east/frame_004.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/south-east/frame_005.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/south-east/frame_006.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/south-east/frame_007.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/south-east/frame_008.png"
+            ],
+            "north-east": [
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/north-east/frame_000.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/north-east/frame_001.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/north-east/frame_002.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/north-east/frame_003.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/north-east/frame_004.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/north-east/frame_005.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/north-east/frame_006.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/north-east/frame_007.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/north-east/frame_008.png"
+            ],
+            "west": [
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/west/frame_000.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/west/frame_001.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/west/frame_002.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/west/frame_003.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/west/frame_004.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/west/frame_005.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/west/frame_006.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/west/frame_007.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/west/frame_008.png"
+            ],
+            "north-west": [
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/north-west/frame_000.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/north-west/frame_001.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/north-west/frame_002.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/north-west/frame_003.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/north-west/frame_004.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/north-west/frame_005.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/north-west/frame_006.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/north-west/frame_007.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/north-west/frame_008.png"
+            ],
+            "south": [
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/south/frame_000.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/south/frame_001.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/south/frame_002.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/south/frame_003.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/south/frame_004.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/south/frame_005.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/south/frame_006.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/south/frame_007.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/south/frame_008.png"
+            ],
+            "east": [
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/east/frame_000.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/east/frame_001.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/east/frame_002.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/east/frame_003.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/east/frame_004.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/east/frame_005.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/east/frame_006.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/east/frame_007.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/east/frame_008.png"
+            ],
+            "north": [
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/north/frame_000.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/north/frame_001.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/north/frame_002.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/north/frame_003.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/north/frame_004.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/north/frame_005.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/north/frame_006.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/north/frame_007.png",
+              "mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/north/frame_008.png"
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "export_version": "3.1",
+  "export_date": "2026-07-13T18:56:20.310744"
+}

@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://cdntceywu5df"]
+
+[ext_resource type="FontFile" uid="uid://cqnl7sulvdt8f" path="res://Font/ghost_theory/Ghost theory 2.ttf" id="1_hdmo1"]
+[ext_resource type="Script" uid="uid://dptmj7h2dy8l2" path="res://pause_menu.gd" id="1_nwcfo"]
+
+[node name="PauseMenu" type="ColorRect" unique_id=1539994843]
+process_mode = 3
+offset_right = 167.0
+offset_bottom = 148.0
+color = Color(1, 1, 1, 0)
+script = ExtResource("1_nwcfo")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1802037493]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1859086233]
+layout_mode = 2
+alignment = 1
+
+[node name="lblTitle" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1090015624]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_hdmo1")
+text = "GAME PAUSED"
+horizontal_alignment = 1
+
+[node name="btnResume" type="Button" parent="CenterContainer/VBoxContainer" unique_id=775227507]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_hdmo1")
+text = "Resume"
+
+[node name="btnHome" type="Button" parent="CenterContainer/VBoxContainer" unique_id=662633469]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_hdmo1")
+text = "Return to Main Menu"
+
+[node name="btnQuit" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1000792788]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_hdmo1")
+text = "Quit Game"
