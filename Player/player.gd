@@ -4,6 +4,7 @@ var movement_speed = 40.0
 var hp = 80
 var maxhp = 80
 var last_movement = Vector2.UP
+var has_moved = false
 var time = 0
 
 var experience = 0
@@ -109,12 +110,13 @@ func movement():
 		
 	if mov != Vector2.ZERO:
 		last_movement = mov
-		if walkTimer.is_stopped():
-			if sprite.frame >= sprite.hframes - 1:	
-				sprite.frame = 0
-			else:
-				sprite.frame += 1
-			walkTimer.start()
+		has_moved = true
+		sprite.play("walk")
+	else:
+		if not has_moved:
+			sprite.play("idle_south")
+		else:
+			sprite.play("idle")
 
 	velocity = mov.normalized()*movement_speed
 	move_and_slide()

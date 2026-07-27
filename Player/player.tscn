@@ -1,18 +1,127 @@
 [gd_scene format=3 uid="uid://8ldeawdekyhn"]
 
 [ext_resource type="Script" uid="uid://ch8ykj76s6uy0" path="res://Player/player.gd" id="1_4ntmi"]
-[ext_resource type="Texture2D" uid="uid://cpo3jiaenmbh" path="res://Textures/Player/Wight_Knight_Pixel_art_Movement_walk_forward.png" id="2_5htga"]
+[ext_resource type="Texture2D" uid="uid://dv8pah8ks2w5m" path="res://Textures/Player/witch/idle_east_0.png" id="2_76lrf"]
 [ext_resource type="PackedScene" uid="uid://bq7tg6cfj6qbb" path="res://Utility/hurt_box.tscn" id="3_btcbx"]
+[ext_resource type="Texture2D" uid="uid://d4hkxa2hhb4xi" path="res://Textures/Player/witch/idle_east_1.png" id="3_efx54"]
 [ext_resource type="Texture2D" uid="uid://bf70y2as2kml5" path="res://Textures/GUI/healthbar.png" id="4_00tjw"]
+[ext_resource type="Texture2D" uid="uid://ciyakug4hm40f" path="res://Textures/Player/witch/idle_east_2.png" id="4_755ss"]
 [ext_resource type="Texture2D" uid="uid://0li2iq8yc481" path="res://Textures/GUI/exp_background.png" id="4_fhl08"]
+[ext_resource type="Texture2D" uid="uid://cox5a8uf4rca1" path="res://Textures/Player/witch/idle_east_3.png" id="5_bbimk"]
 [ext_resource type="Texture2D" uid="uid://blwvpqsi8fn6g" path="res://Textures/GUI/exp_progress.png" id="5_vtle1"]
 [ext_resource type="Texture2D" uid="uid://45fs0qt0rvbb" path="res://Textures/GUI/health.png" id="5_x3vf3"]
+[ext_resource type="Texture2D" uid="uid://bl8jg2tj6ln2k" path="res://Textures/Player/witch/idle_east_4.png" id="6_m0h3t"]
 [ext_resource type="FontFile" uid="uid://ca00qd225l4hd" path="res://VampiroAssets/fonts/Gotfridus.otf" id="6_od3ui"]
+[ext_resource type="Texture2D" uid="uid://21bvvs4oxohi" path="res://Textures/Player/witch/idle_east_5.png" id="7_i4o1l"]
 [ext_resource type="AudioStream" uid="uid://bq6enb7a6ij36" path="res://Audio/SoundEffect/levelup.ogg" id="7_vtle1"]
+[ext_resource type="Texture2D" uid="uid://dpjsjqw4qc184" path="res://Textures/Player/witch/idle_east_6.png" id="8_j2n6q"]
+[ext_resource type="Texture2D" uid="uid://pv3si4er2y0d" path="res://Textures/Player/witch/walk_east_0.png" id="9_c6x0f"]
+[ext_resource type="Texture2D" uid="uid://b8gv0crmdypuj" path="res://Textures/Player/witch/idle_south_0.png" id="9_jp1hh"]
 [ext_resource type="AudioStream" uid="uid://lejyn22twg4l" path="res://Audio/SoundEffect/Victory.wav" id="10_5htga"]
+[ext_resource type="Texture2D" uid="uid://bl810tj155fkg" path="res://Textures/Player/witch/walk_east_1.png" id="10_jp1hh"]
+[ext_resource type="Texture2D" uid="uid://c5vd5aev4g5ng" path="res://Textures/Player/witch/idle_south_1.png" id="10_qs4pp"]
+[ext_resource type="Texture2D" uid="uid://dmyn5f8hvka15" path="res://Textures/Player/witch/idle_south_2.png" id="11_iyprq"]
 [ext_resource type="AudioStream" uid="uid://w343b4x5tvtw" path="res://Audio/SoundEffect/Lose.ogg" id="11_p5o4e"]
+[ext_resource type="Texture2D" uid="uid://noc0uoikkjlb" path="res://Textures/Player/witch/walk_east_2.png" id="11_qs4pp"]
+[ext_resource type="Texture2D" uid="uid://b1ncw3u84y3ai" path="res://Textures/Player/witch/idle_south_3.png" id="12_f4lon"]
 [ext_resource type="PackedScene" uid="uid://b76i4thcriaxl" path="res://Utility/basic_button.tscn" id="12_gu6f8"]
+[ext_resource type="Texture2D" uid="uid://baynaswbldr7t" path="res://Textures/Player/witch/walk_east_3.png" id="12_iyprq"]
+[ext_resource type="Texture2D" uid="uid://oalvbc5bkh5p" path="res://Textures/Player/witch/idle_south_4.png" id="13_8ynux"]
+[ext_resource type="Texture2D" uid="uid://wj34cqnmsa7g" path="res://Textures/Player/witch/walk_east_4.png" id="13_f4lon"]
 [ext_resource type="FontFile" uid="uid://qslq6r3423uk" path="res://VampiroAssets/fonts/Gotfridus.ttf" id="13_p5o4e"]
+[ext_resource type="Texture2D" uid="uid://b274f0dsjxxb8" path="res://Textures/Player/witch/walk_east_5.png" id="14_8ynux"]
+[ext_resource type="Texture2D" uid="uid://4qifr55g1y4r" path="res://Textures/Player/witch/idle_south_5.png" id="14_d30e8"]
+[ext_resource type="Texture2D" uid="uid://bkx7ne8yleva" path="res://Textures/Player/witch/idle_south_6.png" id="15_6pogt"]
+[ext_resource type="Texture2D" uid="uid://60o37dhhq3ab" path="res://Textures/Player/witch/walk_east_6.png" id="15_d30e8"]
+[ext_resource type="Texture2D" uid="uid://do2wypjmcmhky" path="res://Textures/Player/witch/walk_east_7.png" id="16_6pogt"]
+[ext_resource type="Texture2D" uid="uid://bdmukkxwfsjkb" path="res://Textures/Player/witch/walk_east_8.png" id="17_ie76m"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lg5pr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_76lrf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_efx54")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_755ss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bbimk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_m0h3t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_i4o1l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_j2n6q")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_jp1hh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_qs4pp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_iyprq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_f4lon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_8ynux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_d30e8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_6pogt")
+}],
+"loop": 1,
+"name": &"idle_south",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_c6x0f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jp1hh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_qs4pp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_iyprq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_f4lon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_8ynux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_d30e8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_6pogt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ie76m")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 8.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4ntmi"]
 radius = 5.0
@@ -33,13 +142,11 @@ radius = 50.0
 motion_mode = 1
 script = ExtResource("1_4ntmi")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=604066874]
-position = Vector2(-1, -9)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("2_5htga")
-hframes = 10
-vframes = 4
-frame = 21
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=27260500]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_lg5pr")
+animation = &"idle_south"
+autoplay = "idle_south"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2068044585]
 
