@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://c8vdf25eqmml" path="res://Audio/GUI/click.wav" id="2_d6vfv"]
 
 [node name="Button" type="Button" unique_id=1261441914]
+process_mode = 3
 offset_right = 80.0
 offset_bottom = 31.0
 theme_override_fonts/font = ExtResource("1_qkrmd")
@@ -14,9 +15,11 @@ text = "Example"
 script = ExtResource("1_d6vfv")
 
 [node name="snd_hover" type="AudioStreamPlayer" parent="." unique_id=1653056362]
+process_mode = 3
 stream = ExtResource("1_3mu3o")
 
 [node name="snd_click" type="AudioStreamPlayer" parent="." unique_id=1406699447]
+process_mode = 3
 stream = ExtResource("2_d6vfv")
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

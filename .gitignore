@@ -31,6 +31,7 @@
 # export_presets.cfg
 
 # Godot-specific ignores (CORRECTED)
+.godot/
 .import/
 .mono/
 data_*/

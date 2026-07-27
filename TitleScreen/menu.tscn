@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cbqlsfubwmyiy"]
 
 [ext_resource type="Script" uid="uid://c3fendaefklsv" path="res://TitleScreen/menu.gd" id="1_cxswi"]
-[ext_resource type="Texture2D" uid="uid://cen5bmos5amwt" path="res://VampiroAssets/HR_Dark Gothic Castle.png" id="1_dmcrl"]
+[ext_resource type="Texture2D" uid="uid://c4m8ytvdorpkl" path="res://VampiroAssets/HR_Dark Gothic Castle.png" id="1_dmcrl"]
 [ext_resource type="FontFile" uid="uid://ca00qd225l4hd" path="res://VampiroAssets/fonts/Gotfridus.otf" id="2_t4alp"]
 [ext_resource type="PackedScene" uid="uid://b76i4thcriaxl" path="res://Utility/basic_button.tscn" id="3_t4alp"]
 
@@ -25,7 +25,7 @@ offset_bottom = 40.0
 color = Color(0.59469706, 0.2731821, 0.2528543, 1)
 
 [node name="HrDarkGothicCastle" type="Sprite2D" parent="." unique_id=1973324975]
-position = Vector2(337, 187)
+position = Vector2(309, 190)
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("1_dmcrl")
 
