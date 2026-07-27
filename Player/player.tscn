@@ -113,18 +113,6 @@ anchors_preset = 0
 offset_right = 640.0
 offset_bottom = 360.0
 
-[node name="HealthBar" type="TextureProgressBar" parent="GUILayer/GUI" unique_id=755768606]
-unique_name_in_owner = true
-self_modulate = Color(1, 1, 1, 0.39215687)
-layout_mode = 0
-offset_left = 304.0
-offset_top = 200.0
-offset_right = 336.0
-offset_bottom = 208.0
-value = 50.0
-texture_over = ExtResource("4_00tjw")
-texture_progress = ExtResource("5_x3vf3")
-
 [node name="ExperienceBar" type="TextureProgressBar" parent="GUILayer/GUI" unique_id=1281876228]
 unique_name_in_owner = true
 layout_mode = 0
@@ -254,6 +242,20 @@ offset_top = 40.0
 offset_right = 208.0
 offset_bottom = 56.0
 columns = 10
+
+[node name="HealthBarHolder" type="Node2D" parent="." unique_id=991818219]
+position = Vector2(0, 20)
+
+[node name="HealthBar" type="TextureProgressBar" parent="HealthBarHolder" unique_id=755768606]
+unique_name_in_owner = true
+self_modulate = Color(1, 1, 1, 0.39215687)
+offset_left = -14.0
+offset_top = -2.0
+offset_right = 18.0
+offset_bottom = 6.0
+value = 50.0
+texture_over = ExtResource("4_00tjw")
+texture_progress = ExtResource("5_x3vf3")
 
 [connection signal="hurt" from="HurtBox" to="." method="_on_hurt_box_hurt"]
 [connection signal="timeout" from="Attack/IceSpearTimer" to="." method="_on_ice_spear_timer_timeout"]
