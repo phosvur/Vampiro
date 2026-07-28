@@ -79,6 +79,10 @@ vframes = 4
 frame = 21
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2068044585]
+limit_left = -2000
+limit_top = -2000
+limit_right = 2000
+limit_bottom = 2000
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1628166365]
 position = Vector2(1, 2)
