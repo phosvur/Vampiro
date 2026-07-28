@@ -23,6 +23,7 @@ config/icon="res://icon.svg"
 
 UpgradeDb="*uid://ce5ela3ylqwlm"
 GlobalTime="*uid://hvs2w286mtm2"
+GlobalData="*uid://j6ckh6v14cps"
 
 [display]
 

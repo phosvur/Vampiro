@@ -18,6 +18,10 @@ var knockback = Vector2.ZERO
 var death_anim = preload("res://Enemy/explosion.tscn")
 var exp_gem = preload("res://Objects/experience_gem.tscn")
 
+# Preload the new coin scene right beneath the gem!
+var coin_scene = preload("res://Objects/coin.tscn") 
+
+
 signal remove_from_array(object)
 
 func _ready():
@@ -47,15 +51,25 @@ func _physics_process(_delta):
 		sprite.flip_h = false
 		
 func death():
-	emit_signal("remove_from_array",self)
+	emit_signal("remove_from_array", self)
+	
+	# 1. Spawn death animation
 	var enemy_death = death_anim.instantiate()
 	enemy_death.scale = sprite.scale
 	enemy_death.global_position = global_position
-	get_parent().call_deferred("add_child",enemy_death)
-	var new_gem = exp_gem.instantiate()
-	new_gem.global_position = global_position
-	new_gem.experience = experience
-	loot_base.call_deferred("add_child",new_gem)
+	get_parent().call_deferred("add_child", enemy_death)
+	
+	# 2. Roll for Loot Drop Table (e.g., 30% chance for a Coin, 70% chance for a Gem)
+	if randf() < 0.3:
+		var new_coin = coin_scene.instantiate()
+		new_coin.global_position = global_position
+		loot_base.call_deferred("add_child", new_coin)
+	else:
+		var new_gem = exp_gem.instantiate()
+		new_gem.global_position = global_position
+		new_gem.experience = experience # Triggers the setter to adjust texture color instantly!
+		loot_base.call_deferred("add_child", new_gem)
+		
 	queue_free()
 		
 func _on_hurt_box_hurt(damage, angle, knockback_amount):
