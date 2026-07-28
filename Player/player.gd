@@ -61,6 +61,7 @@ var enemy_close = []
 # --- GUI References ---
 @onready var expBar = get_node("%ExperienceBar")
 @onready var lblLevel = get_node("%lbl_level")
+@onready var lblCoins = get_node_or_null("%lblCoins")
 @onready var levelPanel = get_node("%LevelUp")
 @onready var upgradeOptions = get_node("%UpgradeOptions")
 @onready var itemOptions = preload("res://Utility/item_option.tscn")
@@ -76,8 +77,11 @@ var enemy_close = []
 
 @onready var deathPanel = get_node("%DeathPanel")
 @onready var lblResult = get_node("%lbl_Result")
+@onready var lblSummary = get_node_or_null("%lblSummary")
 @onready var sndVictory = get_node("%snd_victory")
 @onready var sndLose = get_node("%snd_lose")
+
+@onready var coinSprite = $CoinDisplay/IconControl/CoinSprite # Adjust path to your AnimatedSprite2D
 
 signal playerdeath
 
@@ -88,6 +92,9 @@ func _ready():
 	attack()
 	set_expbar(experience, calculate_experiencecap())
 	update_health_bar()
+	
+	if coinSprite:
+		coinSprite.play("default") # Forces the spinning animation to start!
 
 
 func _physics_process(_delta):
@@ -484,17 +491,31 @@ func death():
 	deathPanel.visible = true
 	emit_signal("playerdeath")
 	get_tree().paused = true
+	
 	var tween = deathPanel.create_tween()
 	tween.tween_property(deathPanel, "position", Vector2(220, 50), 3.0).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_OUT)
 	tween.play()
+	
 	if time >= 200:
-		lblResult.text = "You Win"
+		lblResult.text = "You Win!"
 		sndVictory.play()
 	else:
 		lblResult.text = "You Lose"
 		sndLose.play()
 
+	# 🪙 Add text details to your death panel label or a new summary label:
+	# e.g., if you have a summary label in DeathPanel:
+	var lbl_summary = deathPanel.get_node_or_null("lblSummary")
+	if lbl_summary:
+		lbl_summary.text = "Coins Collected: " + str(GlobalData.current_run_coins) + "\nTotal Coins: " + str(GlobalData.total_coins)
+
 
 func _on_btn_menu_click_end() -> void:
 	get_tree().paused = false
 	var _level = get_tree().change_scene_to_file("res://TitleScreen/menu.tscn")
+	
+func update_coin_gui():
+	if lblCoins:
+		lblCoins.text = str(GlobalData.current_run_coins)
+		
+		

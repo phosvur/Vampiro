@@ -27,6 +27,12 @@ func toggle_pause() -> void:
 	get_tree().paused = new_pause_state
 	visible = new_pause_state
 	
+	if new_pause_state:
+		# Update total coin label in pause menu if present
+		var lbl_total = find_child("lblTotalCoins", true, false) as Label
+		if lbl_total:
+			lbl_total.text = "Banked Coins: " + str(GlobalData.total_coins)
+	
 	# Look up the sound node relative to your PauseLayer position
 	var music_player = get_node_or_null("../../snd_Music") 
 	if music_player and music_player is AudioStreamPlayer:
