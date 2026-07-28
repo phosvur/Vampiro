@@ -10,7 +10,9 @@ texture = ExtResource("1_tujht")
 script = ExtResource("2_tujht")
 
 [node name="ItemTexture" type="TextureRect" parent="." unique_id=612735168]
+custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
 offset_right = 33.0
 offset_bottom = 33.0
 scale = Vector2(0.33, 0.33)
+expand_mode = 1

@@ -52,7 +52,7 @@ _data = {
 size = Vector2(10, 11)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eqilm"]
-size = Vector2(6.5, 8)
+size = Vector2(4, 5)
 
 [node name="enemy_skull_weak" type="CharacterBody2D" unique_id=1882834488]
 collision_layer = 5
@@ -60,6 +60,7 @@ collision_mask = 5
 motion_mode = 1
 script = ExtResource("1_0q20x")
 movement_speed = 32.0
+hp = 5
 experience = 2
 enemy_damage = 3
 
@@ -92,7 +93,7 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
-position = Vector2(1, 0)
+position = Vector2(1, -0.5)
 shape = SubResource("RectangleShape2D_eqilm")
 
 [node name="snd_hit" type="AudioStreamPlayer2D" parent="." unique_id=214614909]

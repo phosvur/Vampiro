@@ -99,6 +99,73 @@ const UPGRADES = {
 		"prerequisite": ["tornado3"],
 		"type": "weapon"
 	},
+	# --- TIME SLOW progression ---
+	"timeslow1": {
+		"icon": WEAPON_PATH + "clock.png",
+		"displayname": "Clock",
+		"details": "Actively slow down enemy movement speed [E]",
+		"level": "Level: 1",
+		"prerequisite": [],
+		"type": "weapon"
+	},
+	"timeslow2": {
+		"icon": WEAPON_PATH + "clock.png",
+		"displayname": "Clock",
+		"details": "Increases slow-motion duration (+1.0s)",
+		"level": "Level: 2",
+		"prerequisite": ["timeslow1"],
+		"type": "weapon"
+	},
+	"timeslow3": {
+		"icon": WEAPON_PATH + "clock.png",
+		"displayname": "Clock",
+		"details": "Reduces ability cooldown (-1.5s)",
+		"level": "Level: 3",
+		"prerequisite": ["timeslow2"],
+		"type": "weapon"
+	},
+	"timeslow4": {
+		"icon": WEAPON_PATH + "clock.png",
+		"displayname": "Clock",
+		"details": "Maximizes slow-motion duration (+1.0s)",
+		"level": "Level: 4",
+		"prerequisite": ["timeslow3"],
+		"type": "weapon"
+	},
+
+	# --- BOMB progression ---
+	"bomb1": {
+		"icon": WEAPON_PATH + "bomb.png",
+		"displayname": "Bomb",
+		"details": "Drop a timed explosive at your feet [Q]",
+		"level": "Level: 1",
+		"prerequisite": [],
+		"type": "weapon"
+	},
+	"bomb2": {
+		"icon": WEAPON_PATH + "bomb.png",
+		"displayname": "Bomb",
+		"details": "Increases explosion blast radius and visual scale (+50%)",
+		"level": "Level: 2",
+		"prerequisite": ["bomb1"],
+		"type": "weapon"
+	},
+	"bomb3": {
+		"icon": WEAPON_PATH + "bomb.png",
+		"displayname": "Bomb",
+		"details": "Reduces mine drop cooldown (-1.0s)",
+		"level": "Level: 3",
+		"prerequisite": ["bomb2"],
+		"type": "weapon"
+	},
+	"bomb4": {
+		"icon": WEAPON_PATH + "bomb.png",
+		"displayname": "Bomb",
+		"details": "Maximizes explosion blast radius (+120%)",
+		"level": "Level: 4",
+		"prerequisite": ["bomb3"],
+		"type": "weapon"
+	},
 	"armor1": {
 		"icon": ICON_PATH + "helmet_1.png",
 		"displayname": "Armor",

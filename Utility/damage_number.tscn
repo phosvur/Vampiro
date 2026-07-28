@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://calksvflu25jv"]
+
+[ext_resource type="FontFile" uid="uid://5puw30cg7smk" path="res://Font/Press_Start_2P/PressStart2P-Regular.ttf" id="1_2gr86"]
+[ext_resource type="Script" uid="uid://cuyvckghdgojj" path="res://Utility/damage_number.gd" id="2_ltvyj"]
+
+[node name="DamageNumber" type="Label" unique_id=1209544652]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -11.5
+offset_right = 24.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_2gr86")
+theme_override_font_sizes/font_size = 11
+text = "999"
+horizontal_alignment = 1
+script = ExtResource("2_ltvyj")
