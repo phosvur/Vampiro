@@ -66,6 +66,6 @@ volume_db = -10.0
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=699487813]
 sprite_frames = SubResource("SpriteFrames_517vs")
 autoplay = "default"
-frame_progress = 0.8782282
+frame_progress = 0.81063384
 
 [connection signal="finished" from="snd_collected" to="." method="_on_snd_collected_finished"]
