@@ -20,6 +20,7 @@ var exp_gem = preload("res://Objects/experience_gem.tscn")
 
 # Preload the new coin scene right beneath the gem!
 var coin_scene = preload("res://Objects/coin.tscn") 
+var damage_number_scene = preload("res://Utility/damage_number.tscn")
 
 
 signal remove_from_array(object)
@@ -75,7 +76,26 @@ func death():
 func _on_hurt_box_hurt(damage, angle, knockback_amount):
 	hp -= damage
 	knockback = angle * knockback_amount
+	
+	# 💥 Spawn Floating Damage Number
+	spawn_damage_number(damage)
+	
 	if hp <= 0:
 		death()
 	else:
 		snd_hit.play()
+
+func spawn_damage_number(amount: int) -> void:
+	var number_instance = damage_number_scene.instantiate()
+	
+	# Add to main world or loot base so it doesn't move with the enemy
+	if loot_base:
+		loot_base.call_deferred("add_child", number_instance)
+	else:
+		get_parent().call_deferred("add_child", number_instance)
+		
+	number_instance.global_position = global_position
+	
+	# Treat high damage (e.g., >= 10) or critical hits as red numbers
+	var is_critical = amount >= 10
+	number_instance.setup(amount, is_critical)
