@@ -12,7 +12,8 @@
 [ext_resource type="AudioStream" uid="uid://lejyn22twg4l" path="res://Audio/SoundEffect/Victory.wav" id="10_5htga"]
 [ext_resource type="AudioStream" uid="uid://w343b4x5tvtw" path="res://Audio/SoundEffect/Lose.ogg" id="11_p5o4e"]
 [ext_resource type="PackedScene" uid="uid://b76i4thcriaxl" path="res://Utility/basic_button.tscn" id="12_gu6f8"]
-[ext_resource type="FontFile" uid="uid://qslq6r3423uk" path="res://VampiroAssets/fonts/Gotfridus.ttf" id="13_p5o4e"]
+[ext_resource type="FontFile" uid="uid://cqnl7sulvdt8f" path="res://Font/ghost_theory/Ghost theory 2.ttf" id="13_p5o4e"]
+[ext_resource type="Texture2D" uid="uid://d1wkkdavxe2hv" path="res://Textures/Items/Coins/coin.png" id="14_gu6f8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4ntmi"]
 radius = 5.0
@@ -28,6 +29,42 @@ radius = 367.8872
 radius = 50.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k53q1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gu6f8"]
+atlas = ExtResource("14_gu6f8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dkpta"]
+atlas = ExtResource("14_gu6f8")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lfmf2"]
+atlas = ExtResource("14_gu6f8")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pisgm"]
+atlas = ExtResource("14_gu6f8")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_517vs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gu6f8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dkpta")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lfmf2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pisgm")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Player" type="CharacterBody2D" unique_id=1959000591 groups=["player"]]
 motion_mode = 1
@@ -195,6 +232,15 @@ text = "Result"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="lblSummary" type="Label" parent="GUILayer/GUI/DeathPanel" unique_id=1870818798]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 60.0
+offset_right = 200.0
+offset_bottom = 113.0
+theme_override_fonts/font = ExtResource("13_p5o4e")
+horizontal_alignment = 1
+
 [node name="snd_victory" type="AudioStreamPlayer" parent="GUILayer/GUI/DeathPanel" unique_id=2110655772]
 unique_name_in_owner = true
 stream = ExtResource("10_5htga")
@@ -254,6 +300,31 @@ offset_top = 40.0
 offset_right = 208.0
 offset_bottom = 56.0
 columns = 10
+
+[node name="CoinDisplay" type="HBoxContainer" parent="GUILayer/GUI" unique_id=639082227]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 46.0
+offset_right = 43.0
+offset_bottom = 86.0
+
+[node name="iconControl" type="Control" parent="GUILayer/GUI/CoinDisplay" unique_id=18482023]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+
+[node name="CoinSprite" type="AnimatedSprite2D" parent="GUILayer/GUI/CoinDisplay/iconControl" unique_id=118001474]
+position = Vector2(14, 20)
+sprite_frames = SubResource("SpriteFrames_517vs")
+autoplay = "default"
+frame_progress = 0.46327034
+
+[node name="lblCoins" type="Label" parent="GUILayer/GUI/CoinDisplay" unique_id=161201526]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("13_p5o4e")
+theme_override_font_sizes/font_size = 11
+text = "0"
+horizontal_alignment = 1
 
 [connection signal="hurt" from="HurtBox" to="." method="_on_hurt_box_hurt"]
 [connection signal="timeout" from="Attack/IceSpearTimer" to="." method="_on_ice_spear_timer_timeout"]
