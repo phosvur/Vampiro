@@ -11,7 +11,7 @@ var spell_cooldown = 0
 var additional_attacks = 0 
 var last_movement = Vector2.UP
 var time = 0
-
+var has_moved = false
 # --- Progression ---
 var experience = 0
 var experience_level = 1
@@ -116,25 +116,27 @@ func _physics_process(_delta):
 
 
 func movement():
-	var x_mov = Input.get_action_strength("right") - Input.get_action_strength("left")
+	var x_mov = Input.get_action_strength("right") -  Input.get_action_strength("left")
 	var y_mov = Input.get_action_strength("down") - Input.get_action_strength("up")
 	var mov = Vector2(x_mov, y_mov)
-	
 	if mov.x > 0:
+		#sprite.flip_h = true
 		sprite.flip_h = false
 	elif mov.x < 0:
+		#sprite.flip_h = false
 		sprite.flip_h = true
 		
 	if mov != Vector2.ZERO:
 		last_movement = mov
-		if walkTimer.is_stopped():
-			if sprite.frame >= sprite.hframes - 1:    
-				sprite.frame = 0
-			else:
-				sprite.frame += 1
-			walkTimer.start()
+		has_moved = true
+		sprite.play("walk")
+	else:
+		if not has_moved:
+			sprite.play("idle_south")
+		else:
+			sprite.play("idle")
 
-	velocity = mov.normalized() * movement_speed
+	velocity = mov.normalized()*movement_speed
 	move_and_slide()
 
 

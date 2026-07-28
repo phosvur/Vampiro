@@ -1,19 +1,120 @@
 [gd_scene format=3 uid="uid://8ldeawdekyhn"]
 
 [ext_resource type="Script" uid="uid://ch8ykj76s6uy0" path="res://Player/player.gd" id="1_4ntmi"]
-[ext_resource type="Texture2D" uid="uid://cpo3jiaenmbh" path="res://Textures/Player/Wight_Knight_Pixel_art_Movement_walk_forward.png" id="2_5htga"]
+[ext_resource type="Texture2D" uid="uid://5fbvjx0abj2g" path="res://Textures/Player/Dark_fantasy_witch_girl_wearing/Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/east/frame_000.png" id="2_j2n6q"]
 [ext_resource type="PackedScene" uid="uid://bq7tg6cfj6qbb" path="res://Utility/hurt_box.tscn" id="3_btcbx"]
+[ext_resource type="Texture2D" uid="uid://687n8mifjtei" path="res://Textures/Player/Dark_fantasy_witch_girl_wearing/Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/east/frame_001.png" id="3_c6x0f"]
 [ext_resource type="Texture2D" uid="uid://bf70y2as2kml5" path="res://Textures/GUI/healthbar.png" id="4_00tjw"]
 [ext_resource type="Texture2D" uid="uid://0li2iq8yc481" path="res://Textures/GUI/exp_background.png" id="4_fhl08"]
+[ext_resource type="Texture2D" uid="uid://ckc32mfs8cuc3" path="res://Textures/Player/Dark_fantasy_witch_girl_wearing/Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/east/frame_002.png" id="4_jp1hh"]
+[ext_resource type="Texture2D" uid="uid://gxat27keuexr" path="res://Textures/Player/Dark_fantasy_witch_girl_wearing/Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/east/frame_003.png" id="5_qs4pp"]
 [ext_resource type="Texture2D" uid="uid://blwvpqsi8fn6g" path="res://Textures/GUI/exp_progress.png" id="5_vtle1"]
 [ext_resource type="Texture2D" uid="uid://45fs0qt0rvbb" path="res://Textures/GUI/health.png" id="5_x3vf3"]
+[ext_resource type="Texture2D" uid="uid://nkdo7ygfgrx6" path="res://Textures/Player/Dark_fantasy_witch_girl_wearing/Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/east/frame_004.png" id="6_iyprq"]
 [ext_resource type="FontFile" uid="uid://ca00qd225l4hd" path="res://VampiroAssets/fonts/Gotfridus.otf" id="6_od3ui"]
+[ext_resource type="Texture2D" uid="uid://ds1hj1bddorfi" path="res://Textures/Player/Dark_fantasy_witch_girl_wearing/Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/east/frame_005.png" id="7_f4lon"]
 [ext_resource type="AudioStream" uid="uid://bq6enb7a6ij36" path="res://Audio/SoundEffect/levelup.ogg" id="7_vtle1"]
+[ext_resource type="Texture2D" uid="uid://3bm0myjd34xr" path="res://Textures/Player/Dark_fantasy_witch_girl_wearing/Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/east/frame_006.png" id="8_8ynux"]
+[ext_resource type="Texture2D" uid="uid://cw3h4flf0vqty" path="res://Textures/Player/Dark_fantasy_witch_girl_wearing/Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/south/frame_000.png" id="9_d30e8"]
 [ext_resource type="AudioStream" uid="uid://lejyn22twg4l" path="res://Audio/SoundEffect/Victory.wav" id="10_5htga"]
+[ext_resource type="Texture2D" uid="uid://bme6ln0attcg8" path="res://Textures/Player/Dark_fantasy_witch_girl_wearing/Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/south/frame_001.png" id="10_6pogt"]
+[ext_resource type="Texture2D" uid="uid://bi6uclmcrxpln" path="res://Textures/Player/Dark_fantasy_witch_girl_wearing/Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/south/frame_002.png" id="11_ie76m"]
 [ext_resource type="AudioStream" uid="uid://w343b4x5tvtw" path="res://Audio/SoundEffect/Lose.ogg" id="11_p5o4e"]
+[ext_resource type="Texture2D" uid="uid://yq7cdqdh7rti" path="res://Textures/Player/Dark_fantasy_witch_girl_wearing/Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/south/frame_003.png" id="12_dy65m"]
 [ext_resource type="PackedScene" uid="uid://b76i4thcriaxl" path="res://Utility/basic_button.tscn" id="12_gu6f8"]
+[ext_resource type="Texture2D" uid="uid://cefvjra0gd3ba" path="res://Textures/Player/Dark_fantasy_witch_girl_wearing/Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/south/frame_004.png" id="13_maysp"]
 [ext_resource type="FontFile" uid="uid://cqnl7sulvdt8f" path="res://Font/ghost_theory/Ghost theory 2.ttf" id="13_p5o4e"]
+[ext_resource type="Texture2D" uid="uid://31uuugltvh7i" path="res://Textures/Player/Dark_fantasy_witch_girl_wearing/Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/south/frame_005.png" id="14_1l10g"]
 [ext_resource type="Texture2D" uid="uid://d1wkkdavxe2hv" path="res://Textures/Items/Coins/coin.png" id="14_gu6f8"]
+[ext_resource type="Texture2D" uid="uid://c7hulhps6hjcw" path="res://Textures/Player/Dark_fantasy_witch_girl_wearing/Dark_fantasy_witch_girl_wearing/animations/The_witch_stands_in_place_her_body_gently_rising_a/south/frame_006.png" id="15_6rl0i"]
+[ext_resource type="Texture2D" uid="uid://lnev4o7ivybd" path="res://Textures/Player/Dark_fantasy_witch_girl_wearing/mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/east/frame_000.png" id="16_7x5p2"]
+[ext_resource type="Texture2D" uid="uid://dsre7p035ntn7" path="res://Textures/Player/Dark_fantasy_witch_girl_wearing/mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/east/frame_001.png" id="17_6eb1q"]
+[ext_resource type="Texture2D" uid="uid://cmgy7q6voj3ar" path="res://Textures/Player/Dark_fantasy_witch_girl_wearing/mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/east/frame_002.png" id="18_wvbyc"]
+[ext_resource type="Texture2D" uid="uid://m8ono62bdiy6" path="res://Textures/Player/Dark_fantasy_witch_girl_wearing/mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/east/frame_003.png" id="19_gvnt1"]
+[ext_resource type="Texture2D" uid="uid://c5nlutpfhx7oy" path="res://Textures/Player/Dark_fantasy_witch_girl_wearing/mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/east/frame_004.png" id="20_1kmt7"]
+[ext_resource type="Texture2D" uid="uid://cv7nxdebktrm5" path="res://Textures/Player/Dark_fantasy_witch_girl_wearing/mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/east/frame_005.png" id="21_c4i3b"]
+[ext_resource type="Texture2D" uid="uid://dkaqklomjd0xm" path="res://Textures/Player/Dark_fantasy_witch_girl_wearing/mid-walk/animations/The_witch_walks_forward_with_a_steady_rhythmic_gai/east/frame_006.png" id="22_uvbbp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ujgqh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_j2n6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_c6x0f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jp1hh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qs4pp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_iyprq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_f4lon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8ynux")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_d30e8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_6pogt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ie76m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_dy65m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_maysp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_1l10g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_6rl0i")
+}],
+"loop": 1,
+"name": &"idle_south",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_7x5p2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_6eb1q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_wvbyc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_gvnt1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_1kmt7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_c4i3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_uvbbp")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 8.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4ntmi"]
 radius = 5.0
@@ -70,13 +171,12 @@ animations = [{
 motion_mode = 1
 script = ExtResource("1_4ntmi")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=604066874]
-position = Vector2(-1, -9)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("2_5htga")
-hframes = 10
-vframes = 4
-frame = 21
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1377851049]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ujgqh")
+animation = &"walk"
+autoplay = "idle_south"
+frame_progress = 0.3601203
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2068044585]
 limit_left = -2000
@@ -289,20 +389,6 @@ offset_right = 208.0
 offset_bottom = 56.0
 columns = 10
 
-[node name="HealthBarHolder" type="Node2D" parent="." unique_id=991818219]
-position = Vector2(0, 20)
-
-[node name="HealthBar" type="TextureProgressBar" parent="HealthBarHolder" unique_id=755768606]
-unique_name_in_owner = true
-self_modulate = Color(1, 1, 1, 0.39215687)
-offset_left = -14.0
-offset_top = -2.0
-offset_right = 18.0
-offset_bottom = 6.0
-value = 50.0
-texture_over = ExtResource("4_00tjw")
-texture_progress = ExtResource("5_x3vf3")
-
 [node name="CoinDisplay" type="HBoxContainer" parent="GUILayer/GUI" unique_id=639082227]
 layout_mode = 0
 offset_left = 3.0
@@ -327,6 +413,20 @@ theme_override_fonts/font = ExtResource("13_p5o4e")
 theme_override_font_sizes/font_size = 11
 text = "0"
 horizontal_alignment = 1
+
+[node name="HealthBarHolder" type="Node2D" parent="." unique_id=991818219]
+position = Vector2(0, 20)
+
+[node name="HealthBar" type="TextureProgressBar" parent="HealthBarHolder" unique_id=755768606]
+unique_name_in_owner = true
+self_modulate = Color(1, 1, 1, 0.39215687)
+offset_left = -14.0
+offset_top = -2.0
+offset_right = 18.0
+offset_bottom = 6.0
+value = 50.0
+texture_over = ExtResource("4_00tjw")
+texture_progress = ExtResource("5_x3vf3")
 
 [connection signal="hurt" from="HurtBox" to="." method="_on_hurt_box_hurt"]
 [connection signal="timeout" from="Attack/IceSpearTimer" to="." method="_on_ice_spear_timer_timeout"]
